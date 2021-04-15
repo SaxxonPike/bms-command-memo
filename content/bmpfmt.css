@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* † */
+
+body{background:#EEE;color:#000;font-size:1em;font-family:Consolas,Meiryo,monospace,serif;}
+h1{font-size:1em;font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0;margin:0 0 10em;}
+table,dl{font-size:.8em;}
+dl{line-height:1.4;}
+th{background:#DDD;max-width:4em;}
+th,td{border:1px solid #666;padding:0 .4em;}
+td{background:#CFC;}
+.c{background:#EEE;}
+.n{background:#FCC;}
+.p{background:#CC0;}
+.a{background:#000;color:#FF0;}

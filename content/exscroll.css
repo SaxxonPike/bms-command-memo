@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* † */
+figcaption,figure{display:block;}
+html{background:#EEE;color:#000;font-size:100.01%;font-family:Verdana,sans-serif;}
+body{margin:1em auto;padding:0 1em;max-width:70em;}
+table,code,kbd,pre,samp{font-family:Consolas,monospace,serif;}
+code{color:#0F2F2F;font-size:1em;}
+h1,samp{font-size:1em;}
+p,pre{margin:0;}
+em{color:#900;}
+table{border-collapse:collapse;border-spacing:0;font-size:.8em;}
+dl table{font-size:1em;}
+dl{line-height:1.67;margin-bottom:6em;}
+b,.proposer{background:#FF0;color:#000;}
+caption{text-align:left;font-size:1.2em;font-weight:bold;}
+th{background:#DDD;}
+th,td{border:1px solid #666;padding:0 .4em;white-space:nowrap;}
+.y{background:#CFC;}
+.n{background:#FCC;}
+.p{background:#CC0;}
+.a{background:#000;color:#FF0;}
+dt{font-size:1.2em;}
+dl dl dt{font-size:1em;}
+dd+dt{margin-top:1em;}
+dd>pre{margin-bottom:1em;}
+pre{font-size:.8em;height:12em;width:26em;overflow:auto;padding:0 .5em;resize:both;}
+.International-System-of-Units-style-Thousands-separator:before{content:'\A0';}
+

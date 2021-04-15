@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://hitkey.nekokan.dyndns.info/exbpm-object.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="content/exscroll.css">
+    <title>Extended BPM - BMS Command</title>
+  </head>
+  <body>
+    <h1>Extended BPM - BMS Command</h1>
+
+    <table>
+      <caption><code>#BPMxx <var>real-number</var></code></caption>
+      <thead>
+        <tr>
+          <td class="c"></td>
+          <th class="index" scope="col">Index</th>
+          <th class="min-v" scope="col">Minimum</th>
+          <th class="max-v" scope="col">Maximum</th>
+          <th class="expon" scope="col"><code>1E+2</code></th>
+          <th class="minus" scope="col">Negative</th>
+          <th class="zerov" scope="col">Zero</th>
+          <th class="str-v" scope="col">String</th>
+          <th class="delim" scope="col"><code>#BPM02<b>␣</b></code></th>
+          <th class="nospc" scope="col"><code>#BPM02</code></th>
+          <th class="undef" scope="col">Lone <code>08</code></th>
+          <th class="ch3-8" scope="col"><code>03</code> vs <code>08</code></th>
+          <th class="ch8-9" scope="col"><code>08</code> vs <code>09</code></th>
+          <th class="brake" scope="col"><code>08</code> to <code>03</code></th>
+          <th class="accur" scope="col">Accuracy</th>
+          <th class="granu" scope="col">Granularity</th>
+          <th class="exbpm" scope="col"><code>#EXBPM</code></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="c proposer">bemaniaDX</td>
+          <td class="index n">01-99 (99)</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 n">Near
+            <abbr title="Beginning of File">BOF</abbr></td>
+          <td class="ch8-9">----</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Erratic</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">MixWaver</td>
+          <td class="index n">01-FE(254)</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon n">1</td>
+          <td class="minus a">HANG-UP</td>
+          <td class="zerov a">HANG-UP</td>
+          <td class="str-v a">HANG-UP</td>
+          <td class="delim a">HANG-UP</td>
+          <td class="nospc a">HANG-UP</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 y">Near <abbr title="End of File">EOF</abbr></td>
+          <td class="ch8-9">----</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">BGAEncoder</td>
+          <td class="index n">01-73(255)</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- 19200 ? no --></td>
+          <td class="expon y">100</td>
+          <td class="minus a">ABEND</td>
+          <td class="zerov a">HANG-UP</td>
+          <td class="str-v a">HANG-UP</td>
+          <td class="delim a">HANG-UP</td>
+          <td class="nospc a">HANG-UP</td>
+          <td class="undef a">HANG-UP</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">/64: <span class="a">HANG</span></td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">BM98de 3.32</td>
+          <td class="index n">02-FF(254)</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx03</td>
+          <td class="ch8-9">----</td>
+          <td class="brake n">Through</td>
+          <td class="accur y">High</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">BM98de 3.31</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9">----</td>
+          <td class="brake n">Through</td>
+          <td class="accur y">High</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">KbMedia</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus p">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9">----</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial<!-- /64: very slightly slow --></td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">GALLI</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel / 384000000 --></td>
+          <td class="expon y">100</td>
+          <td class="minus p">Ignore <b>-</b></td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Too Slow</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">BMEV</td>
+          <td class="index p">01-FZ(575)</td>
+          <td class="min-v">0.014 -</td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus n">NoScroll</td>
+          <td class="zerov a">ROARING</td>
+          <td class="str-v a">ROARING</td>
+          <td class="delim n">NoScroll</td>
+          <td class="nospc n">NoScroll</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9">----</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">Rhythm-it</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 p">Unstable<!-- Near EOF --></td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Low/Fast</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">nazobmplay</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 p">Unstable<!-- Near EOF --></td>
+          <td class="ch8-9 n">Strange</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Too Fast</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">O2mania</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by Pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9">----</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">#xxx02:1</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">Delight</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- OK: 98560000 +, NG: 900000000 --></td>
+          <td class="expon y">100</td>
+          <td class="minus p">130</td>
+          <td class="zerov p">130</td>
+          <td class="str-v p">130</td>
+          <td class="delim p">130</td>
+          <td class="nospc p">130</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Low/Fast</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">WAview</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v">0.014 -</td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus p">130</td>
+          <td class="zerov p">130</td>
+          <td class="str-v p">130</td>
+          <td class="delim p">130</td>
+          <td class="nospc p">130</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">in_bm2</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0.014 -</td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus p">130</td>
+          <td class="zerov p">130</td>
+          <td class="str-v p">130</td>
+          <td class="delim p">130</td>
+          <td class="nospc p">130</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">nanasi</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0.10</td>
+          <td class="max-v">999999.98<!--
+            Judge by Changeable Pixel
+          --></td>
+          <td class="expon y">100</td>
+          <td class="minus p">Ignore</td>
+          <td class="zerov p">0.10</td>
+          <td class="str-v p">150</td>
+          <td class="delim p">150</td>
+          <td class="nospc p">150</td>
+          <td class="undef p">150</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur n">Low/Slow</td>
+          <td class="granu p">MinBPM: 0.1</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">pomu2</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0.0583 -</td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus p">Ignore</td>
+          <td class="zerov p">1</td>
+          <td class="str-v p">1</td>
+          <td class="delim p">1</td>
+          <td class="nospc p">1</td>
+          <td class="undef p">1</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 n">Strange</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">O2play</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus n">Stop</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">ParseEnd</td>
+          <td class="delim n">ParseEnd</td>
+          <td class="nospc n">ParseEnd</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9">----</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">#xxx02:1</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!--
+            OK: 985600,
+            NG: 12twister (immediately end),
+            NG: 900000000
+            Judge by Changeable Pixel (probably)
+          --></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="brake n">Through</td>
+          <td class="accur n">Low/Slow</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt++</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!--
+            OK: 985600,
+            NG: 12twister (immediately end),
+            NG: 900000000
+          --></td>
+          <td class="expon n">1</td>
+          <td class="minus p">Rev-&gt;End</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="brake n">Through</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt#</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!--
+            NG: 98560 (KEY),
+            ABEND: 12twister,
+            NG: 900000000
+          --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">Stop</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="brake n">Through</td>
+          <td class="accur p">Few Slow</td>
+          <td class="granu n">Low</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">LR2</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef n">-1</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">ruv-it!</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus y">Rev-&gt;End</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v n">Stop</td>
+          <td class="delim n">Stop</td>
+          <td class="nospc n">Stop</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">uBMplay</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">PMSee-V</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">-999.99…</td>
+          <td class="max-v">99999.99…</td>
+          <td class="expon y">100</td>
+          <td class="minus y">Reverse</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">BMSE</td>
+          <td class="index y">FF/ZZ auto</td>
+          <td class="min-v">-65535</td>
+          <td class="max-v">65535</td>
+          <td class="expon y">100</td>
+          <td class="minus y">Editable</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v a">ABEND</td>
+          <td class="delim a">ABEND</td>
+          <td class="nospc p">ExTab</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="brake">----</td>
+          <td class="accur">----</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm p">ExTab</td>
+        </tr>
+
+        <tr>
+          <td class="c">iBMSC</td>
+          <td class="index y">FF/ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v">65535.9999</td>
+          <td class="expon y">100</td>
+          <td class="minus p">0</td>
+          <td class="zerov y">0 (Del)</td>
+          <td class="str-v y">0</td>
+          <td class="delim y">0</td>
+          <td class="nospc y">0</td>
+          <td class="undef y">0</td>
+          <td class="ch3-8">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="brake">----</td>
+          <td class="accur">----</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm p">ExTab</td>
+        </tr>
+
+        <tr>
+          <td class="c">DTXCreator</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0<!-- significant figures: 7 --></td>
+          <td class="max-v">1000</td>
+          <td class="expon n">1</td>
+          <td class="minus p">0</td>
+          <td class="zerov y">0</td>
+          <td class="str-v y">0</td>
+          <td class="delim y">0</td>
+          <td class="nospc y">0</td>
+          <td class="undef y">0</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9">----</td>
+          <td class="brake">----</td>
+          <td class="accur">----</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm p">FrTab</td>
+        </tr>
+
+        <tr>
+          <td class="c">GDAC2</td>
+          <td class="index y">FF/FZ/ZZ</td>
+          <td class="min-v">----</td>
+          <td class="max-v">----</td>
+          <td class="expon">----</td>
+          <td class="minus">----</td>
+          <td class="zerov">----</td>
+          <td class="str-v">----</td>
+          <td class="delim">----</td>
+          <td class="nospc">----</td>
+          <td class="undef y">Yes</td>
+          <td class="ch3-8">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="brake">----</td>
+          <td class="accur">----</td>
+          <td class="granu y">(by chance)</td>
+          <td class="exbpm p">ExTab</td>
+        </tr>
+
+        <tr>
+          <td class="c">BME2WAV</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus p">Chaos</td>
+          <td class="zerov a">ABEND</td>
+          <td class="str-v n">Failed</td>
+          <td class="delim n">Failed</td>
+          <td class="nospc n">Failed</td>
+          <td class="undef n">Failed</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">BMX2WAV</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus p">Chaos</td>
+          <td class="zerov y">Alert</td>
+          <td class="str-v y">Alert</td>
+          <td class="delim y">Alert</td>
+          <td class="nospc y">Alert</td>
+          <td class="undef y">Alert</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">IIDXview</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus n">Alert</td>
+          <td class="zerov y">Alert</td>
+          <td class="str-v y">Alert</td>
+          <td class="delim y">Alert</td>
+          <td class="nospc y">Alert</td>
+          <td class="undef p">120</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm p">Parse</td>
+        </tr>
+
+        <tr>
+          <td class="c">HDX</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon y">100</td>
+          <td class="minus n">Gray-out</td>
+          <td class="zerov y">Gray-out</td>
+          <td class="str-v y">Gray-out</td>
+          <td class="delim y">Gray-out</td>
+          <td class="nospc y">Gray-out</td>
+          <td class="undef p">120</td>
+          <td class="ch3-8 y">Near EOF</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu p">Partial</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">Angol(C)</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- OK: 985600, NG: 900000000 --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Rev-&gt;End</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 n">09 -&gt; 08</td>
+          <td class="brake n">Through</td>
+          <td class="accur p">Few Fast</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">Angol(R)</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- OK: 985600, NG: 900000000 --></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Rev-&gt;End</td>
+          <td class="zerov n">Stop</td>
+          <td class="str-v p">130</td>
+          <td class="delim p">130</td>
+          <td class="nospc p">130</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">Unstable<!-- #xxx08 --></td>
+          <td class="ch8-9 n">From top</td>
+          <td class="brake n">Through</td>
+          <td class="accur p">Few Fast</td>
+          <td class="granu y">High</td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">Sonorous</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon n">1</td>
+          <td class="minus y">Rev-&gt;End</td>
+          <td class="zerov p">End</td>
+          <td class="str-v p">130</td>
+          <td class="delim p">130</td>
+          <td class="nospc p">130</td>
+          <td class="undef p">130</td>
+          <td class="ch3-8 p">#xxx08</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">BGAEncAdv</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon n">12</td>
+          <td class="minus y">END</td>
+          <td class="zerov n">Escape</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 p">Unstable<!-- Near BOF --></td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">Technical</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v">900000000 +</td>
+          <td class="expon n">3052</td>
+          <td class="minus p">Reverse?</td>
+          <td class="zerov a">ABEND</td>
+          <td class="str-v p">TypeCast</td>
+          <td class="delim a">ABEND</td>
+          <td class="nospc a">ABEND</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch3-8 p">Unstable<!-- Near EOF --></td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="brake y">Yes</td>
+          <td class="accur y">High</td>
+          <td class="granu y">High</td>
+          <td class="exbpm y">Yes</td>
+        </tr>
+
+        <tr>
+          <td class="c">MacBeat</td>
+          <td class="index">01-FF?</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon"></td>
+          <td class="minus"></td>
+          <td class="zerov"></td>
+          <td class="str-v"></td>
+          <td class="delim"></td>
+          <td class="nospc"></td>
+          <td class="undef"></td>
+          <td class="ch3-8"></td>
+          <td class="ch8-9">----</td>
+          <td class="brake"></td>
+          <td class="accur"></td>
+          <td class="granu"></td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+        <tr>
+          <td class="c">Aqua'nBeats</td>
+          <td class="index">01-ZZ?</td>
+          <td class="min-v">0?</td>
+          <td class="max-v">99999999.99?</td>
+          <td class="expon"></td>
+          <td class="minus"></td>
+          <td class="zerov"></td>
+          <td class="str-v"></td>
+          <td class="delim"></td>
+          <td class="nospc"></td>
+          <td class="undef"></td>
+          <td class="ch3-8"></td>
+          <td class="ch8-9">----</td>
+          <td class="brake"></td>
+          <td class="accur"></td>
+          <td class="granu"></td>
+          <td class="exbpm n">No</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <dl>
+
+      <dt>Update History:</dt>
+      <dd>2014-06-19: [nanasigroove ver.1.552] Maximux value:
+       not 900000000 but 999999.98</dd>
+      <dd>2014-06-13: [BGAEncAdvance Ver0.034] Improved ABEND/<wbr>ENDLESS
+       issues (Negative, Zero, String, <code>#BPM02␣</code>,
+       <code>#BPM02</code>)</dd>
+      <dd>2014-05-12: [HDX v1.03] Supported #EXBPM</dd>
+      <dd>2014-03-19: [PMSee-V v2.2.1] Improved ABEND issues (Zero, String,
+       <code>#BPM02␣</code>, <code>#BPM02</code>,
+       Lone <code>08</code>)</dd>
+      <dd>2014-02-27: GALLI is not <code>ZZ</code> but <code>FF</code></dd>
+      <dd>2014-02-26: Changed CSS</dd>
+      <dd>2014-02-22: Added DTXCreator, Issue about indexes of BGAEncoder</dd>
+      <dd>2014-02-20: Added KbMedia Player</dd>
+      <dd>2014-02-19:
+        <code>08</code> vs <code>09</code> column,
+        Accuracy column,
+        Granularity column,
+        Re-investigation about BM98de 3.32</dd>
+      <dd>2014-02-17: <code>08</code> to <code>03</code> column</dd>
+      <dd>2014-02-16: First publication</dd>
+
+
+      <dt>Index column:</dt>
+      <dd><dl>
+          <dt>[bemaniaDX]</dt>
+          <dd><p>bemaniaDX can use only decimal number.
+              But the channel <code>08</code> <em>must use Base-36</em>.</p>
+            <p>“<code>#xxx08:<b>2R</b></code>” can refer
+              “<code>#bpm<b>99</b> <var>n</var></code>”.</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE exBPM for bemaniaDX
+#ARTIST 131
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+
+#BPM01 256
+#BPM02 257
+#BPM03 258
+#BPM04 259
+#BPM05 260
+#BPM06 261
+#BPM07 262
+#BPM08 263
+#BPM09 264
+#BPM10 265
+#BPM11 266
+#BPM12 267
+#BPM13 268
+#BPM14 269
+#BPM15 270
+#BPM16 271
+#BPM17 272
+#BPM18 273
+#BPM19 274
+#BPM20 275
+#BPM21 276
+#BPM22 277
+#BPM23 278
+#BPM24 279
+#BPM25 280
+#BPM26 281
+#BPM27 282
+#BPM28 283
+#BPM29 284
+#BPM30 285
+#BPM31 286
+#BPM32 287
+#BPM33 288
+#BPM34 289
+#BPM35 290
+#BPM36 291
+#BPM37 292
+#BPM38 293
+#BPM39 294
+#BPM40 295
+#BPM41 296
+#BPM42 297
+#BPM43 298
+#BPM44 299
+#BPM45 300
+#BPM46 301
+#BPM47 302
+#BPM48 303
+#BPM49 304
+#BPM50 305
+#BPM51 306
+#BPM52 307
+#BPM53 308
+#BPM54 309
+#BPM55 310
+#BPM56 311
+#BPM57 312
+#BPM58 313
+#BPM59 314
+#BPM60 315
+#BPM61 316
+#BPM62 317
+#BPM63 318
+#BPM64 319
+#BPM65 320
+#BPM66 321
+#BPM67 322
+#BPM68 323
+#BPM69 324
+#BPM70 325
+#BPM71 326
+#BPM72 327
+#BPM73 328
+#BPM74 329
+#BPM75 330
+#BPM76 331
+#BPM77 332
+#BPM78 333
+#BPM79 334
+#BPM80 335
+#BPM81 336
+#BPM82 337
+#BPM83 338
+#BPM84 339
+#BPM85 340
+#BPM86 341
+#BPM87 342
+#BPM88 343
+#BPM89 344
+#BPM90 345
+#BPM91 346
+#BPM92 347
+#BPM93 348
+#BPM94 349
+#BPM95 350
+#BPM96 351
+#BPM97 352
+#BPM98 353
+#BPM99 354
+
+#00108:0102030405060708090A0B0C0D0E0F0G0H0I0J0K0L0M0N0O0P0Q0R0S0T0U0V0W
+#00208:0X0Y0Z101112131415161718191A1B1C1D1E1F1G1H1I1J1K1L1M1N1O1P1Q1R1S
+#00308:1T1U1V1W1X1Y1Z202122232425262728292A2B2C2D2E2F2G2H2I2J2K2L2M2N2O
+#00408:2P2Q2R
+#00411:000001
+
+
+</code></pre></figure></dd>
+
+          <dt>[MixWaver]</dt>
+          <dd><p>“<code>#BPM<em>FF</em></code>”
+              will <em>terminate MixWaver abnormally</em>.</p>
+            <p>“<code>#xxx08:<em>FF</em></code>”
+              <em>freezes MixWaver</em>.</p></dd>
+
+          <dt>[BM98 Kikuchan Version 3.32β Drink Edition]</dt>
+          <dd><p>“<code>#xxx08:<em>01</em></code>”
+              will <em>terminate BM98de 3.32 abnormally</em>.</p></dd>
+
+          <dt>[BGAEncoder]</dt>
+          <dd><p>“<em>255 indexes by Base-36</em>”
+              vs “<em>hexadecimal channel-numbers</em>”.</p>
+            <p>“<code>#xxx08:<b>FF</b></code>” can refer
+              “<code>#bpm<b>73</b> <var>n</var></code>”.</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE exBPM for BGAEncoder
+#ARTIST BMP: cyclia
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+%URL http://www.yamajet.com/archives/43
+
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp</code>
+
+// xxx08:01-FF (effective)
+<code>#BPM01 256
+#BPM02 257
+#BPM03 258
+#BPM04 259
+#BPM05 260
+#BPM06 261
+#BPM07 262
+#BPM08 263
+#BPM09 264
+#BPM0A 265
+#BPM0B 266
+#BPM0C 267
+#BPM0D 268
+#BPM0E 269
+#BPM0F 270
+#BPM0G 271
+#BPM0H 272
+#BPM0I 273
+#BPM0J 274
+#BPM0K 275
+#BPM0L 276
+#BPM0M 277
+#BPM0N 278
+#BPM0O 279
+#BPM0P 280
+#BPM0Q 281
+#BPM0R 282
+#BPM0S 283
+#BPM0T 284
+#BPM0U 285
+#BPM0V 286
+#BPM0W 287
+#BPM0X 288
+#BPM0Y 289
+#BPM0Z 290
+#BPM10 291
+#BPM11 292
+#BPM12 293
+#BPM13 294
+#BPM14 295
+#BPM15 296
+#BPM16 297
+#BPM17 298
+#BPM18 299
+#BPM19 300
+#BPM1A 301
+#BPM1B 302
+#BPM1C 303
+#BPM1D 304
+#BPM1E 305
+#BPM1F 306
+#BPM1G 307
+#BPM1H 308
+#BPM1I 309
+#BPM1J 310
+#BPM1K 311
+#BPM1L 312
+#BPM1M 313
+#BPM1N 314
+#BPM1O 315
+#BPM1P 316
+#BPM1Q 317
+#BPM1R 318
+#BPM1S 319
+#BPM1T 320
+#BPM1U 321
+#BPM1V 322
+#BPM1W 323
+#BPM1X 324
+#BPM1Y 325
+#BPM1Z 326
+#BPM20 327
+#BPM21 328
+#BPM22 329
+#BPM23 330
+#BPM24 331
+#BPM25 332
+#BPM26 333
+#BPM27 334
+#BPM28 335
+#BPM29 336
+#BPM2A 337
+#BPM2B 338
+#BPM2C 339
+#BPM2D 340
+#BPM2E 341
+#BPM2F 342
+#BPM2G 343
+#BPM2H 344
+#BPM2I 345
+#BPM2J 346
+#BPM2K 347
+#BPM2L 348
+#BPM2M 349
+#BPM2N 350
+#BPM2O 351
+#BPM2P 352
+#BPM2Q 353
+#BPM2R 354
+#BPM2S 355
+#BPM2T 356
+#BPM2U 357
+#BPM2V 358
+#BPM2W 359
+#BPM2X 360
+#BPM2Y 361
+#BPM2Z 362
+#BPM30 363
+#BPM31 364
+#BPM32 365
+#BPM33 366
+#BPM34 367
+#BPM35 368
+#BPM36 369
+#BPM37 370
+#BPM38 371
+#BPM39 372
+#BPM3A 373
+#BPM3B 374
+#BPM3C 375
+#BPM3D 376
+#BPM3E 377
+#BPM3F 378
+#BPM3G 379
+#BPM3H 380
+#BPM3I 381
+#BPM3J 382
+#BPM3K 383
+#BPM3L 384
+#BPM3M 385
+#BPM3N 386
+#BPM3O 387
+#BPM3P 388
+#BPM3Q 389
+#BPM3R 390
+#BPM3S 391
+#BPM3T 392
+#BPM3U 393
+#BPM3V 394
+#BPM3W 395
+#BPM3X 396
+#BPM3Y 397
+#BPM3Z 398
+#BPM40 399
+#BPM41 400
+#BPM42 401
+#BPM43 402
+#BPM44 403
+#BPM45 404
+#BPM46 405
+#BPM47 406
+#BPM48 407
+#BPM49 408
+#BPM4A 409
+#BPM4B 410
+#BPM4C 411
+#BPM4D 412
+#BPM4E 413
+#BPM4F 414
+#BPM4G 415
+#BPM4H 416
+#BPM4I 417
+#BPM4J 418
+#BPM4K 419
+#BPM4L 420
+#BPM4M 421
+#BPM4N 422
+#BPM4O 423
+#BPM4P 424
+#BPM4Q 425
+#BPM4R 426
+#BPM4S 427
+#BPM4T 428
+#BPM4U 429
+#BPM4V 430
+#BPM4W 431
+#BPM4X 432
+#BPM4Y 433
+#BPM4Z 434
+#BPM50 435
+#BPM51 436
+#BPM52 437
+#BPM53 438
+#BPM54 439
+#BPM55 440
+#BPM56 441
+#BPM57 442
+#BPM58 443
+#BPM59 444
+#BPM5A 445
+#BPM5B 446
+#BPM5C 447
+#BPM5D 448
+#BPM5E 449
+#BPM5F 450
+#BPM5G 451
+#BPM5H 452
+#BPM5I 453
+#BPM5J 454
+#BPM5K 455
+#BPM5L 456
+#BPM5M 457
+#BPM5N 458
+#BPM5O 459
+#BPM5P 460
+#BPM5Q 461
+#BPM5R 462
+#BPM5S 463
+#BPM5T 464
+#BPM5U 465
+#BPM5V 466
+#BPM5W 467
+#BPM5X 468
+#BPM5Y 469
+#BPM5Z 470
+#BPM60 471
+#BPM61 472
+#BPM62 473
+#BPM63 474
+#BPM64 475
+#BPM65 476
+#BPM66 477
+#BPM67 478
+#BPM68 479
+#BPM69 480
+#BPM6A 481
+#BPM6B 482
+#BPM6C 483
+#BPM6D 484
+#BPM6E 485
+#BPM6F 486
+#BPM6G 487
+#BPM6H 488
+#BPM6I 489
+#BPM6J 490
+#BPM6K 491
+#BPM6L 492
+#BPM6M 493
+#BPM6N 494
+#BPM6O 495
+#BPM6P 496
+#BPM6Q 497
+#BPM6R 498
+#BPM6S 499
+#BPM6T 500
+#BPM6U 501
+#BPM6V 502
+#BPM6W 503
+#BPM6X 504
+#BPM6Y 505
+#BPM6Z 506
+#BPM70 507
+#BPM71 508
+#BPM72 509
+#BPM73 510</code>
+
+<span class="n">// xxx08:FG-FZ (unavailable)</span>
+<code>#BPM74 511
+#BPM75 512
+#BPM76 513
+#BPM77 514
+#BPM78 515
+#BPM79 516
+#BPM7A 517
+#BPM7B 518
+#BPM7C 519
+#BPM7D 520
+#BPM7E 521
+#BPM7F 522
+#BPM7G 523
+#BPM7H 524
+#BPM7I 525
+#BPM7J 526
+#BPM7K 527
+#BPM7L 528
+#BPM7M 529
+#BPM7N 530</code>
+
+<span class="a">// xxx08:G0-ZZ (temp0.avi continues growing fat)
+// BPM7O 531
+// ...</span>
+
+* -------------------------------------
+<code>#00108:0102030405060708090A0B0C0D0E0F10
+#00208:1112131415161718191A1B1C1D1E1F20
+#00308:2122232425262728292A2B2C2D2E2F30
+#00408:3132333435363738393A3B3C3D3E3F40
+#00508:4142434445464748494A4B4C4D4E4F50
+#00608:5152535455565758595A5B5C5D5E5F60
+#00708:6162636465666768696A6B6C6D6E6F70
+#00808:7172737475767778797A7B7C7D7E7F80
+#00908:8182838485868788898A8B8C8D8E8F90
+#01008:9192939495969798999A9B9C9D9E9FA0
+#01108:A1A2A3A4A5A6A7A8A9AAABACADAEAFB0
+#01208:B1B2B3B4B5B6B7B8B9BABBBCBDBEBFC0
+#01308:C1C2C3C4C5C6C7C8C9CACBCCCDCECFD0
+#01408:D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0
+#01508:E1E2E3E4E5E6E7E8E9EAEBECEDEEEFF0
+#01608:F1F2F3F4F5F6F7F8F9FAFBFCFDFEFF<span class="n">FG</span>
+#01708:<span class="n">FHFIFJFKFLFMFNFOFPFQFRFSFTFUFVFW</span>
+#01808:<span class="n">FXFYFZ</span>00000000000000000000000000
+
+#00104:01020304
+#00204:01020304
+#00304:01020304
+#00404:01020304
+#00504:01020304
+#00604:01020304
+#00704:01020304
+#00804:01020304
+#00904:01020304
+#01004:01020304
+#01104:01020304
+#01204:01020304
+#01304:01020304
+#01404:01020304
+#01504:01020304
+#01604:01020304
+#01704:05020304
+#01804:05020304
+#01904:05
+#01911:01
+
+
+</code></pre></figure></dd>
+
+        </dl></dd>
+
+
+      <dt><code>1E+2</code> column:</dt>
+      <dd><p>Exponential value
+          “<code>#BPM02 <b>1E+2</b></code>”</p></dd>
+
+
+      <dt>Negative column:</dt>
+      <dd><p>Negative number “<code>#BPM02 <b>-45</b></code>”</p>
+        <dl>
+          <dt>[forgetalia++]</dt>
+          <dd><p>“<code>#<span class="n">001</span>08:02</code>”
+              ... <em>Immediately End</em></p></dd>
+
+          <dt>[BMX2WAV]</dt>
+          <dd><p>“<code>#<span class="n">001</span>08:02</code>”
+              ... <samp><em>bad alloc exception thrown</em></samp></p></dd>
+        </dl></dd>
+
+
+      <dt>Zero column:</dt>
+      <dd><p>“<code>#BPM02 <b>0</b></code>”</p></dd>
+
+      <dt>String column:</dt>
+      <dd><p>“<code>#BPM02 <b>a</b></code>”</p></dd>
+
+      <dt><code>#BPM02<b>␣</b></code> column:</dt>
+      <dd><p>Command + delimiter (<em>without value</em>)</p></dd>
+
+      <dt><code>#BPM02</code> column:</dt>
+      <dd><p>Command only (<em>without delimiter and value</em>)</p></dd>
+
+      <dt>Lone <code>08</code> column:</dt>
+      <dd><p>The channel <code>08</code>
+          which refers to <em>undefined exBPM indexes</em>.
+          (E.g. “<code>#00108:02</code>”
+          without “<code>#BPM02</code>”)</p></dd>
+
+
+      <dt><code>03</code> vs <code>08</code> column:</dt>
+      <dd><p>When the channels <code>#xxx<b>03</b></code> and
+          <code>#xxx<b>08</b></code> <em>compete on the same timeline</em>.</p>
+        <dl>
+          <dt>[Rhythm-it]</dt>
+          <dt>[unofficial nazobmplay]</dt>
+          <dt>[Angolmois Rust Edition]</dt>
+          <dt>[BGAEncAdvance]</dt>
+          <dt>[Technical<wbr>Groove]</dt>
+          <dd><p>When the description about BGA is added to BMS,
+              results differ.</p>
+            <figure><table>
+                <thead>
+                  <tr>
+                    <th scope="col">Sound only</th>
+                    <th scope="col">add BGA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [exBPM 280 vs BPM 140]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+#TOTAL 83
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0A bass.wav
+#WAV0B ohh.wav
+
+<b>#BPM02 280</b>
+
+#00101:0100020001020100
+#00101:0300040003040300
+#00101:000B000B000B000B
+#00101:0A000A000A0A0A00
+<b>#00108:02</b>
+<b>#00103:8C</b>
+#00112:00060600
+#00114:05
+#00115:00000008
+
+#00201:0102010200000000
+#00201:0304030400000000
+#00201:000B000B00000000
+#00201:0A0A0A0A00000000
+#00212:0006070000000000
+#00214:05
+#00215:0000000800000000
+#00216:0000000000090000
+
+
+</code></pre></td>
+                    <td><pre>// <code>#BMP</code>s and channels <code>#xxx[04-06]</code> are added after the 50th line.
+<code>#STAGEFILE title.bmp
+#BANNER _banner.bmp
+#BMP01 cyc-foonmain_00000.bmp</code>
+...
+<code>#BMPFF cyc-miss00002.bmp
+
+#00104:0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F20<!--
+    -->2122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F40
+#00106:FD0000FE
+#00204:090A0B0C0D0E0F10191A1B1C1D1E1F20292A2B2C2D2E2F30393A3B3C3D3E3F40<!--
+    -->00000000000000004142434445464748494A4B4C4D4E4F505152535455565758
+#00206:0000000000FF0000
+#00304:595A5B5C5D5E5F60000000000000000000000000000000000000000000000000<!--
+    -->6162636465666768000000000000000000000000000000000000000000000000
+#00404:696A6B6C6D6E6F70000000000000000000000000000000000000000000000000<!--
+    -->7172737475767760000000000000000000000000000000000000000000000000
+
+</code></pre></td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption><p><em>Unstable sorting algorithms</em>?</p></figcaption></figure></dd>
+
+          <dt><del datetime="2014-02-19T20:20:00+09:00">[BM98 Kikuchan Version 3.32β Drink Edition]</del></dt>
+          <dd><p><del datetime="2014-02-19T20:20:00+09:00">If <code>#xxx03</code> is described after <code>#xxx08</code>,
+              priority is given to <code>#xxx03</code>.</del></p>
+            <p><del datetime="2014-02-19T20:20:00+09:00"><em>When <code>#xxx08</code> is described after
+              <code>#xxx03</code>, BM98de is ended abnormally</em>.</del></p></dd>
+
+          <dt>[DTXCreator]</dt>
+          <dd><p>All the <code>#xxx03</code> channels are converted
+              to <code>#xxx08</code>.</p></dd>
+
+        </dl></dd>
+
+
+      <dt><code>08</code> vs <code>09</code> column:</dt>
+      <dd><p>When the channels
+          <code>#xxx<b>08</b></code> and <code>#xxx<b>09</b></code>
+          <em>compete on the same timeline</em>.</p>
+        <figure><figcaption><p>Add to <code>foon_5n.bms</code> as follows:</p></figcaption>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><code>08</code> vs <code>09</code></th>
+                <th scope="col"><code>09</code> vs <code>08</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><pre><code>#BPM02 560
+#STOP01 48
+#00203:00000000008C0000
+#002<b>08</b>:0002
+#00209:0001</code></pre></td>
+                <td><pre><code>#BPM02 560
+#STOP01 48
+#00203:00000000008C0000
+#00209:0001
+#002<b>08</b>:0002</code></pre></td>
+              </tr>
+            </tbody>
+          </table></figure>
+        <dl>
+          <dt>[unofficial nazobmplay]</dt>
+          <dd><p>“<code>08</code> vs <code>09</code>” has
+              <em>too long <code>#STOP</code></em>.</p>
+            <p>“<code>09</code> vs <code>08</code>” works
+              as expected.</p></dd>
+
+          <dt>[Feeling Pomu 2nd]</dt>
+          <dd><p>Both have <em>too long <code>#STOP</code></em>.</p>
+            <p>If “<code>#002<b>03</b>:...</code>” is removed,
+              both will succeed. Don't ask me why.</p></dd>
+
+          <dt>[forgetalia]</dt>
+          <dt>[forgetalia++]</dt>
+          <dt>[forgetalia#]</dt>
+          <dt>[Angolmois Rust Edition]</dt>
+          <dd><p>“<code>09</code> vs <code>08</code>” has
+              <em>too long <code>#STOP</code></em>.</p></dd>
+
+          <dt>[Angolmois 2.0 alpha 3]</dt>
+          <dd><p>Both have <em>too long <code>#STOP</code></em>.</p></dd>
+        </dl></dd>
+
+
+      <dt><code>08</code> to <code>03</code> column:</dt>
+      <dd><p><em>Sudden braking</em>.</p>
+        <figure><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [BPM changes from 98560 to 140]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+#TOTAL 83
+#VOLWAV 100
+#STAGEFILE title.bmp
+#BANNER _banner.bmp
+#SUBARTIST BGA: cyclia
+%URL http://www.yamajet.com/archives/43</code>
+
+... ( <code>#WAV</code>s and <code>#BMP</code>s )
+
+<code><b>#BPM02 98560</b>
+
+#00101:01
+#00101:03
+#00101:0A
+#00104:01
+#00106:FD
+<b>#00108:02</b>
+#00114:05
+
+#01204:02
+#02304:03
+#03404:04
+#04504:05
+#05604:06
+#06704:07
+#07804:08
+#08901:0B
+#08904:09
+#10004:0A
+#11104:0B
+#12204:0C
+#13304:0D
+#14404:0E
+#15504:0F
+#16604:10
+
+#17701:0200010201000102
+#17701:0400030403000304
+#17701:000B000B000B000B
+#17701:0A000A0A0A000A0A
+<b>#17703:8C</b>
+#17704:1112131415161718191A1B1C1D1E1F202122232425262728292A2B2C2D2E2F30<!--
+    -->3132333435363738393A3B3C3D3E3F40090A0B0C0D0E0F10191A1B1C1D1E1F20
+#17706:00FE
+#17712:0600060000000006
+#17714:00000005
+#17715:0008
+
+#17801:0102000000000000
+#17801:0304000000000000
+#17801:000B000000000000
+#17801:0A0A000000000000
+#17804:292A2B2C2D2E2F30393A3B3C3D3E3F4000000000000000004142434445464748<!--
+    -->494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F600000000000000000
+#17806:000000FF00000000
+#17812:07
+#17815:0008000000000000
+#17816:0000000900000000
+
+#17904:0000000000000000000000000000000061626364656667680000000000000000<!--
+    -->00000000000000000000000000000000696A6B6C6D6E6F700000000000000000
+#18004:0000000000000000000000000000000071727374757677600000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+
+
+</code></pre></figure>
+        <dl>
+          <dt>[MixWaver]</dt>
+          <dd><p>Drawing is overdue. The number of characters
+              of the data channel line is restricted.</p></dd>
+
+          <dt>[BGAEncoder]</dt>
+          <dd><p><del datetime="2014-02-19T21:30:00+09:00">Although timing is right,
+              it seems that the wrong images are displayed.</del>
+              <ins datetime="2014-02-19T21:30:00+09:00">(Requires 60 FPS or more.)</ins></p>
+            <p>The Measure-number <em>must</em> be
+              less than <code>#250</code>.</p></dd>
+
+          <dt>[O2mania]</dt>
+          <dt>[O2play]</dt>
+          <dd><p><em>They don't know
+              Measure-Length (<code>#xxx02</code>)</em>.</p></dd>
+
+          <dt>[PMSee-V]</dt>
+          <dd><p>Although less than 100<span class="International-System-of-Units-style-Thousands-separator">000</span> BPM scrolls correctly,
+              <em>8-bit WAVs are reproduced incorrectly</em>.</p></dd>
+
+          <dt>[KbMedia Player]
+            (<code>\ Plugins \ Mamiya \ kpibmse \ bmse.kpi</code>)</dt>
+          <dd><p>Although timing is right,
+              the mistaken playback time is displayed.</p></dd>
+        </dl></dd>
+
+
+      <dt>Accuracy column:</dt>
+      <dd><p>exBPM objects with the interval which divides one measure
+          into 192 evenly shows whether it is reproduced correctly.</p>
+        <figure><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [exBPM 280 - 93.3333 - 46.6666]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+#TOTAL 83
+#VOLWAV 100
+#STAGEFILE title.bmp
+
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0C normal-bgm-140bpm.wav
+
+#BMP01 cyc-foonmain_00000.bmp</code>
+...
+<code>#BMPFF cyc-miss00002.bmp
+
+#BPM02 280
+#BPM03 93.3333
+#BPM04 46.6666
+
+#BANNER _banner.bmp
+#SUBARTIST BGA: cyclia
+
+#00101:0C
+#00104:0100000000000200030400000000000500060700000000000800090A00000000<!--
+    -->000B000C0D00000000000E000F10000000000011001213000000000014001516<!--
+    -->00000000001700181900000000001A001B1C00000000001D001E1F0000000000<!--
+    -->20002122000000000023002425000000000026002728000000000029002A2B00<!--
+    -->000000002C002D2E00000000002F003031000000000032003334000000000035<!--
+    -->00363700000000003800393A00000000003B003C3D00000000003E003F400000
+#00106:FD0000FE
+#00108:0200000000000300040200000000000300040200000000000300040200000000<!--
+    -->0003000402000000000003000402000000000003000402000000000003000402<!--
+    -->0000000000030004020000000000030004020000000000030004020000000000<!--
+    -->0300040200000000000300040200000000000300040200000000000300040200<!--
+    -->0000000003000402000000000003000402000000000003000402000000000003<!--
+    -->0004020000000000030004020000000000030004020000000000030004020000
+#00112:0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000006000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000060000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00114:05
+#00115:00000008
+
+#00204:00000009000A0B00000000000C000D0E00000000000F00101900000000001A00<!--
+    -->1B1C00000000001D001E1F00000000002000292A00000000002B002C2D000000<!--
+    -->00002E002F30000000000039003A3B00000000003C003D3E00000000003F0040<!--
+    -->0000000000000000000000000000000000000000000000000000414200000000<!--
+    -->0043004445000000000046004748000000000049004A4B00000000004C004D4E<!--
+    -->00000000004F0050510000000000520053540000000000550056570000000000
+#00206:0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000FF0000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00208:0000000300040200000000000300040200000000000300040200000000000300<!--
+    -->0402000000000003000402000000000003000402000000000003000402000000<!--
+    -->0000030004020000000000030004020000000000030004020000000000030004<!--
+    -->0200000000000300040200000000000300040200000000000300040200000000<!--
+    -->0003000402000000000003000402000000000003000402000000000003000402<!--
+    -->0000000000030004020000000000030004020000000000030004020000000000
+#00212:0000000000000000000000000600000000000000000000000007000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00214:0005000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00215:0000000000000000000000000000000000000000000000000008000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00216:0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000090000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+
+#00304:5800595A00000000005B005C5D00000000005E005F6000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000006100626300000000006400656600000000006700680000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00308:0300040200000000000300040200000000000300040200000000000300040200<!--
+    -->0000000003000402000000000003000402000000000003000402000000000003<!--
+    -->0004020000000000030004020000000000030004020000000000030004020000<!--
+    -->0000000300040200000000000300040200000000000300040200000000000300<!--
+    -->0402000000000003000402000000000003000402000000000003000402000000<!--
+    -->0000030004020000000000030004020000000000030004020000000000030004
+
+#00404:6900000000006A006B6C00000000006D006E6F00000000007000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000717200000000007300747500000000007600776000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00408:0200000000000300040200000000000300040200000000000300040200000000<!--
+    -->0003000402000000000003000402000000000003000402000000000003000402<!--
+    -->0000000000030004020000000000030004020000000000030004020000000000<!--
+    -->0300040200000000000300040200000000000300040200000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+
+
+</code></pre></figure></dd>
+
+
+      <dt>Granularity column:</dt>
+      <dd><p>Robustness over a <em>microscopic BPM</em>.</p>
+        <figure><table>
+            <thead>
+              <tr>
+                <th scope="col">BMS base</th>
+                <th scope="col">+ Appendix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [140/24]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+%URL http://www.yamajet.com/archives/43
+
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0C normal-bgm-140bpm.wav
+
+#BMP01 cyc-foonmain_00000.bmp
+#BMP09 cyc-foonmain_00008.bmp
+#BMP11 cyc-foonmain_00016.bmp
+#BMP19 cyc-foonmain_00024.bmp
+#BMP21 cyc-foonmain_00032.bmp
+#BMP29 cyc-foonmain_00040.bmp
+#BMP31 cyc-foonmain_00048.bmp
+#BMP39 cyc-foonmain_00056.bmp
+#BMP41 cyc-last_00000.bmp
+
+<b>#BPM02 5.833333</b>
+
+#00101:0C
+#001<b>03</b>:00000000000000000000000000<b>FF</b><!--
+    -->000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00104:0100110021003100091929390041000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+<b>#00108:02</b>
+#00112:0000060007000000000607000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00114:050500000000000000000000000000000000000000000000
+#00115:0000000000000800000000080000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00116:0000000000000000000000000009000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+
+
+</code></pre></td>
+                <td><pre>// Change:
+<code>#TITLE (^^) [140/24<b>/64</b>]
+#BPM02 <b>0.0911458333333333</b></code>
+// Add:
+<code><b>#00102:0.015625</b></code></pre></td>
+              </tr>
+            </tbody>
+          </table></figure>
+        <dl>
+          <dt><span class="n">[Low]</span></dt>
+          <dd><p>Implementation cannot reproduce both correctly.</p></dd>
+
+          <dt><span class="y">[High]</span></dt>
+          <dd><p>Implementation can parse/<wbr>reproduce both correctly.</p></dd>
+
+          <dt><span class="p">[other]</span></dt>
+          <dd><p>Implementation can parse/<wbr>reproduce
+              only “140/24” correctly.</p></dd>
+
+          <dt>Note:</dt>
+          <dd><p>The resolution (dissolution) of “140/24/64”
+              is <em>12288</em>. BMx Sequence Editor and iBMS BMS Creator
+              cannot parse this correctly.</p>
+            <p>Since Grid partition of “140/24/64”
+              is <em>192</em>, iBMS BMS Creator 2.4 (and earlier) or
+              GDA Creator Professional parse this BMS correctly
+              <em>by chance</em>.</p></dd>
+        </dl></dd>
+
+
+      <dt><code>#EXBPM</code> column:</dt>
+      <dd><p>It is “Yes” if
+          “<code>#EXBPM02 256</code>” is equivalent to
+          “<code>#BPM02 256</code>”.</p></dd>
+
+    </dl>
+
+
+</body></html>

@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://hitkey.nekokan.dyndns.info/exstop.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="content/exscroll.css">
+    <title>STOP Sequence - BMS Command</title>
+  </head>
+  <body>
+    <h1>STOP Sequence - BMS Command</h1>
+
+    <table>
+      <caption><code>#STOPxx <var>integer</var></code></caption>
+      <thead>
+        <tr>
+          <td class="c"></td>
+          <th class="index" scope="col">Index</th>
+          <th class="min-v" scope="col">Minimum</th>
+          <th class="max-v" scope="col">Maximum</th>
+          <th class="expon" scope="col"><code>1E+2</code></th>
+          <th class="minus" scope="col">Negative</th>
+          <th class="zerov" scope="col">Zero</th>
+          <th class="str-v" scope="col">String</th>
+          <th class="delim" scope="col"><code>#STOP01<b>␣</b></code></th>
+          <th class="nospc" scope="col"><code>#STOP01</code></th>
+          <th class="undef" scope="col">Lone <code>09</code></th>
+          <th class="ch2-9" scope="col"><code>02</code></th>
+          <th class="ch3-9" scope="col"><code>03</code> vs <code>09</code></th>
+          <th class="ch8-9" scope="col"><code>08</code> vs <code>09</code></th>
+          <th class="float" scope="col">Fraction</th>
+          <th class="grade" scope="col">Grading</th>
+          <th class="micro" scope="col">Micro</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="c">pomu2</td>
+          <td class="index n">01-99 (99)</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov p">1</td>
+          <td class="str-v p">1</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 n">Strange</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro n">Wonky</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt</td>
+          <td class="index n">01-73(242)</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!--
+            Grading by Variable Pixel
+          --></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 n">From Top</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro p">Slow</td>
+        </tr>
+
+        <tr>
+          <td class="c">Rhythm-it</td>
+          <td class="index n">01-73(255)</td>
+          <td class="min-v">-1</td>
+          <td class="max-v"><!-- Grading by pixel --></td>
+          <td class="expon n">1</td>
+          <td class="minus n">-1</td>
+          <td class="zerov p">0</td>
+          <td class="str-v p">0</td>
+          <td class="delim p">0</td>
+          <td class="nospc p">0</td>
+          <td class="undef p">0</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">nazobmplay</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v"></td>
+          <td class="max-v"><!-- Grading by pixel --></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 p">Unstable</td>
+          <td class="ch8-9 n">Strange</td>
+          <td class="float n">Round</td>
+          <td class="grade n">Defer</td>
+          <td class="micro n">Wonky</td>
+        </tr>
+
+        <tr>
+          <td class="c">GALLI</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v">0</td>
+          <td class="max-v"><!-- Grading by pixel --></td>
+          <td class="expon n">1</td>
+          <td class="minus n">NoScroll</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 p">Unstable<!-- _stop-precision-4GALLI.bms --></td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade">Unique</td>
+          <td class="micro n">Wonky</td>
+        </tr>
+
+        <tr>
+          <td class="c">PMSee-V</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v">0</td>
+          <td class="max-v">960000</td>
+          <td class="expon n">Ignore</td>
+          <td class="minus n">Alert</td>
+          <td class="zerov p">Rewind</td>
+          <td class="str-v p">Rewind</td>
+          <td class="delim p">Rewind</td>
+          <td class="nospc p">Rewind</td>
+          <td class="undef p">Rewind</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate<!-- ? --></td>
+          <td class="grade">----</td>
+          <td class="micro n">Wonky</td>
+        </tr>
+
+        <tr>
+          <td class="c proposer">Delight</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus n">0</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade y">Strict</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">WAview</td>
+          <td class="index p">01-FF</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus n">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">in_bm2</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus n">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">nanasi</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0.1</td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus p">0.1</td>
+          <td class="zerov p">0.1</td>
+          <td class="str-v p">24</td>
+          <td class="delim p">24</td>
+          <td class="nospc p">24</td>
+          <td class="undef p">24</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt++</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 n">From Top</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro p">Slow</td>
+        </tr>
+
+        <tr>
+          <td class="c">fgt#</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 n">From Top</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="float y">Yes</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">LR2</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">-1</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus p">-1(Skip)</td>
+          <td class="zerov p">-1</td>
+          <td class="str-v p">-1</td>
+          <td class="delim p">-1</td>
+          <td class="nospc p">-1</td>
+          <td class="undef p">-1</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade y">Strict</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">ruv-it!</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus n">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade y">Strict</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">uBMplay</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v a">ABEND</td>
+          <td class="delim a">ABEND</td>
+          <td class="nospc a">ABEND</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Round</td>
+          <td class="grade">Strict?</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">BMSE</td>
+          <td class="index y">FF/ZZ auto</td>
+          <td class="min-v">0</td>
+          <td class="max-v">65535</td>
+          <td class="expon y">100</td>
+          <td class="minus p">Readable</td>
+          <td class="zerov p">0</td>
+          <td class="str-v a">ABEND</td>
+          <td class="delim a">ABEND</td>
+          <td class="nospc p">0/ExTab</td>
+          <td class="undef p">0</td>
+          <td class="ch2-9">--</td>
+          <td class="ch3-9">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="float n">Round</td>
+          <td class="grade">----</td>
+          <td class="micro">----</td>
+        </tr>
+
+        <tr>
+          <td class="c">iBMSC</td>
+          <td class="index y">FF/ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v">65535.9999</td>
+          <td class="expon y">100</td>
+          <td class="minus p">0</td>
+          <td class="zerov p">0</td>
+          <td class="str-v p">0</td>
+          <td class="delim p">0</td>
+          <td class="nospc p">0</td>
+          <td class="undef p">0</td>
+          <td class="ch2-9">--</td>
+          <td class="ch3-9">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="float y">Yes</td>
+          <td class="grade">----</td>
+          <td class="micro">----</td>
+        </tr>
+
+        <tr>
+          <td class="c">GDAC2</td>
+          <td class="index y">FF/FZ/ZZ</td>
+          <td class="min-v">----</td>
+          <td class="max-v">----</td>
+          <td class="expon">----</td>
+          <td class="minus">----</td>
+          <td class="zerov">----</td>
+          <td class="str-v">----</td>
+          <td class="delim">----</td>
+          <td class="nospc">----</td>
+          <td class="undef y">Yes</td>
+          <td class="ch2-9">--</td>
+          <td class="ch3-9">Both</td>
+          <td class="ch8-9">Both</td>
+          <td class="float">----</td>
+          <td class="grade">----</td>
+          <td class="micro">----</td>
+        </tr>
+
+        <tr>
+          <td class="c">BME2WAV</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus p">Slide</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v n">Failed</td>
+          <td class="delim n">Failed</td>
+          <td class="nospc n">Failed</td>
+          <td class="undef n">Failed</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">BMX2WAV</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">Alert</td>
+          <td class="minus p">Slide</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Alert</td>
+          <td class="delim y">Alert</td>
+          <td class="nospc y">Alert</td>
+          <td class="undef y">Alert</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Alert</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">IIDXview</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">HDX</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon y">100</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade n">Defer</td>
+          <td class="micro p">Cease</td>
+        </tr>
+
+        <tr>
+          <td class="c">Angol(C)</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus n">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 n">09 -&gt; 08</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">Angol(R)</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v"></td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 n">From top</td>
+          <td class="ch8-9 n">From top</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">Sonorous</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">1</td>
+          <td class="minus n">Ignore</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade n">Defer</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">BGAEnc</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">-8947</td>
+          <td class="max-v">8947</td>
+          <td class="expon n">1</td>
+          <td class="minus y">Skip</td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float n">Truncate</td>
+          <td class="grade">----</td>
+          <td class="micro p">Slow</td>
+        </tr>
+
+        <tr>
+          <td class="c">BGAEncAdv</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">Ignore</td>
+          <td class="minus p">Ignore <b>-</b></td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+        <tr>
+          <td class="c">Technical</td>
+          <td class="index y">01-ZZ</td>
+          <td class="min-v">0</td>
+          <td class="max-v"></td>
+          <td class="expon n">Ignore</td>
+          <td class="minus p">Ignore <b>-</b></td>
+          <td class="zerov y">Ignore</td>
+          <td class="str-v y">Ignore</td>
+          <td class="delim y">Ignore</td>
+          <td class="nospc y">Ignore</td>
+          <td class="undef y">Ignore</td>
+          <td class="ch2-9 y">OK</td>
+          <td class="ch3-9 y">03 -&gt; 09</td>
+          <td class="ch8-9 y">08 -&gt; 09</td>
+          <td class="float y">Yes</td>
+          <td class="grade">----</td>
+          <td class="micro y">Fine</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <dl>
+
+      <dt>Update History:</dt>
+      <dd>2014-02-27: forgetalia can use not 238 indexes but 242 indexes</dd>
+      <dd>2014-02-26: Corrected some errors about Negative/<wbr>Zero</dd>
+      <dd>2014-02-25: First publication</dd>
+
+
+      <dt>Index column:</dt>
+      <dd><dl>
+          <dt>[Feeling Pomu 2nd]</dt>
+          <dd><p>Pomu2 can use only decimal number.
+              But the channel <code>09</code> <em>must use Base-36</em>.</p>
+            <p>“<code>#xxx09:<b>2R</b></code>” can refer
+              “<code>#stop<b>99</b> <var>n</var></code>”.</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE STOP for Feeling Pomu 2nd
+#ARTIST Yamajet / 131
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 ohh.wav
+#WAV06 ohh.wav
+#WAV07 v_f.wav
+#WAV08 v_f.wav
+#WAV09 v_o.wav
+#WAV0A v_o.wav
+#WAV0B v_foon.wav
+
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp</code>
+
+// xxx09:01-2R
+<code>#STOP01 1
+#STOP02 2
+#STOP03 3
+#STOP04 4
+#STOP05 5
+#STOP06 6
+#STOP07 7
+#STOP08 8
+#STOP09 9
+#STOP10 10
+#STOP11 11
+#STOP12 12
+#STOP13 13
+#STOP14 14
+#STOP15 15
+#STOP16 16
+#STOP17 1
+#STOP18 2
+#STOP19 3
+#STOP20 4
+#STOP21 5
+#STOP22 6
+#STOP23 7
+#STOP24 8
+#STOP25 9
+#STOP26 10
+#STOP27 11
+#STOP28 12
+#STOP29 13
+#STOP30 14
+#STOP31 15
+#STOP32 16
+#STOP33 1
+#STOP34 2
+#STOP35 3
+#STOP36 4
+#STOP37 5
+#STOP38 6
+#STOP39 7
+#STOP40 8
+#STOP41 9
+#STOP42 10
+#STOP43 11
+#STOP44 12
+#STOP45 13
+#STOP46 14
+#STOP47 15
+#STOP48 16
+#STOP49 1
+#STOP50 2
+#STOP51 3
+#STOP52 4
+#STOP53 5
+#STOP54 6
+#STOP55 7
+#STOP56 8
+#STOP57 9
+#STOP58 10
+#STOP59 11
+#STOP60 12
+#STOP61 13
+#STOP62 14
+#STOP63 15
+#STOP64 16
+#STOP65 1
+#STOP66 2
+#STOP67 3
+#STOP68 4
+#STOP69 5
+#STOP70 6
+#STOP71 7
+#STOP72 8
+#STOP73 9
+#STOP74 10
+#STOP75 11
+#STOP76 12
+#STOP77 13
+#STOP78 14
+#STOP79 15
+#STOP80 16
+#STOP81 1
+#STOP82 2
+#STOP83 3
+#STOP84 4
+#STOP85 5
+#STOP86 6
+#STOP87 7
+#STOP88 8
+#STOP89 9
+#STOP90 10
+#STOP91 11
+#STOP92 12
+#STOP93 13
+#STOP94 14
+#STOP95 15
+#STOP96 16
+#STOP97 1
+#STOP98 2
+#STOP<b>99 192</b></code>
+
+<span class="n">// Unavailable:
+// stop9A 192
+// stopA0 192
+// ...</span>
+
+
+<code>#00101:01050306020504060105030602050406
+#00101:0709080A0709080A0709080A0709080A
+#00104:01020304010203040102030401020304
+#00109:000100020003000400050006000700080009000A000B000C000D000E000F000G
+
+#00201:01050306020504060105030602050406
+#00201:0709080A0709080A0709080A0709080A
+#00204:01020304010203040102030401020304
+#00209:000H000I000J000K000L000M000N000O000P000Q000R000S000T000U000V000W
+
+#00301:01050306020504060105030602050406
+#00301:0709080A0709080A0709080A0709080A
+#00304:01020304010203040102030401020304
+#00309:000X000Y000Z0010001100120013001400150016001700180019001A001B001C
+
+#00401:01050306020504060105030602050406
+#00401:0709080A0709080A0709080A0709080A
+#00404:01020304010203040102030401020304
+#00409:001D001E001F001G001H001I001J001K001L001M001N001O001P001Q001R001S
+
+#00501:01050306020504060105030602050406
+#00501:0709080A0709080A0709080A0709080A
+#00504:01020304010203040102030401020304
+#00509:001T001U001V001W001X001Y001Z002000210022002300240025002600270028
+
+#00601:01050306020504060105030602050406
+#00601:0709080A0709080A0709080A0709080A
+#00604:01020304010203040102030401020304
+#00609:0029002A002B002C002D002E002F002G002H002I002J002K002L002M002N002O
+
+#00701:01050306020504060105030602050406
+#00701:0709080A0709080A0709080A0709080A
+#00704:01020304010203040102030401020304
+#00709:002P002Q00<b>2R</b>0000000000000000000000000000000000000000000000000000
+
+#00815:0B</code>
+
+// <em><code>#00704</code> does not stop</em>. Don't ask me why.
+
+
+</pre></figure></dd>
+
+          <dt>[forgetalia]</dt>
+          <dd><p><em>242 indexes by Base-36</em>.</p>
+            <p>(Note: The reference to the indexes from <code>41</code>
+              to <code>4H</code> <em>terminates a song</em>.)</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE STOP for forgetalia
+#ARTIST Yamajet / 131
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 ohh.wav
+#WAV06 ohh.wav
+#WAV07 v_f.wav
+#WAV08 v_f.wav
+#WAV09 v_o.wav
+#WAV0A v_o.wav
+#WAV0B v_foon.wav
+
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp</code>
+
+// xxx09:01-73
+<code>#STOP01 1
+#STOP02 2
+#STOP03 3
+#STOP04 4
+#STOP05 5
+#STOP06 6
+#STOP07 7
+#STOP08 8
+#STOP09 9
+#STOP0A 10
+#STOP0B 11
+#STOP0C 12
+#STOP0D 13
+#STOP0E 14
+#STOP0F 15
+#STOP0G 16
+#STOP0H 1
+#STOP0I 2
+#STOP0J 3
+#STOP0K 4
+#STOP0L 5
+#STOP0M 6
+#STOP0N 7
+#STOP0O 8
+#STOP0P 9
+#STOP0Q 10
+#STOP0R 11
+#STOP0S 12
+#STOP0T 13
+#STOP0U 14
+#STOP0V 15
+#STOP0W 16
+#STOP0X 1
+#STOP0Y 2
+#STOP0Z 3
+#STOP10 4
+#STOP11 5
+#STOP12 6
+#STOP13 7
+#STOP14 8
+#STOP15 9
+#STOP16 10
+#STOP17 11
+#STOP18 12
+#STOP19 13
+#STOP1A 14
+#STOP1B 15
+#STOP1C 16
+#STOP1D 1
+#STOP1E 2
+#STOP1F 3
+#STOP1G 4
+#STOP1H 5
+#STOP1I 6
+#STOP1J 7
+#STOP1K 8
+#STOP1L 9
+#STOP1M 10
+#STOP1N 11
+#STOP1O 12
+#STOP1P 13
+#STOP1Q 14
+#STOP1R 15
+#STOP1S 16
+#STOP1T 1
+#STOP1U 2
+#STOP1V 3
+#STOP1W 4
+#STOP1X 5
+#STOP1Y 6
+#STOP1Z 7
+#STOP20 8
+#STOP21 9
+#STOP22 10
+#STOP23 11
+#STOP24 12
+#STOP25 13
+#STOP26 14
+#STOP27 15
+#STOP28 16
+#STOP29 1
+#STOP2A 2
+#STOP2B 3
+#STOP2C 4
+#STOP2D 5
+#STOP2E 6
+#STOP2F 7
+#STOP2G 8
+#STOP2H 9
+#STOP2I 10
+#STOP2J 11
+#STOP2K 12
+#STOP2L 13
+#STOP2M 14
+#STOP2N 15
+#STOP2O 16
+#STOP2P 1
+#STOP2Q 2
+#STOP2R 3
+#STOP2S 4
+#STOP2T 5
+#STOP2U 6
+#STOP2V 7
+#STOP2W 8
+#STOP2X 9
+#STOP2Y 10
+#STOP2Z 11
+#STOP30 12
+#STOP31 13
+#STOP32 14
+#STOP33 15
+#STOP34 16
+#STOP35 1
+#STOP36 2
+#STOP37 3
+#STOP38 4
+#STOP39 5
+#STOP3A 6
+#STOP3B 7
+#STOP3C 8
+#STOP3D 9
+#STOP3E 10
+#STOP3F 11
+#STOP3G 12
+#STOP3H 13
+#STOP3I 14
+#STOP3J 15
+#STOP3K 16
+#STOP3L 1
+#STOP3M 2
+#STOP3N 3
+#STOP3O 4
+#STOP3P 5
+#STOP3Q 6
+#STOP3R 7
+#STOP3S 8
+#STOP3T 9
+#STOP3U 10
+#STOP3V 11
+#STOP3W 12
+#STOP3X 13
+#STOP3Y 14
+#STOP3Z 15
+#STOP40 16</code>
+
+<span class="n">// Song is terminated (don't ask me why)</span>
+// stop<span class="n">41</span> 1
+// stop<span class="n">45</span> 5
+// stop<span class="n">46</span> 6
+// stop<span class="n">47</span> 7
+// stop<span class="n">48</span> 8
+// stop<span class="n">49</span> 9
+// stop<span class="n">4A</span> 10
+// stop<span class="n">4B</span> 11
+// stop<span class="n">4C</span> 12
+// stop<span class="n">4D</span> 13
+// stop<span class="n">4E</span> 14
+// stop<span class="n">4F</span> 15
+// stop<span class="n">4H</span> 1
+
+<code>#STOP<span class="p">42</span> 10
+#STOP<span class="p">43</span> 11
+#STOP<span class="p">44</span> 12
+#STOP<span class="p">4G</span> 13
+
+#STOP4I 2
+#STOP4J 3
+#STOP4K 4
+#STOP4L 5
+#STOP4M 6
+#STOP4N 7
+#STOP4O 8
+#STOP4P 9
+#STOP4Q 10
+#STOP4R 11
+#STOP4S 12
+#STOP4T 13
+#STOP4U 14
+#STOP4V 15
+#STOP4W 16
+#STOP4X 1
+#STOP4Y 2
+#STOP4Z 3
+#STOP50 4
+#STOP51 5
+#STOP52 6
+#STOP53 7
+#STOP54 8
+#STOP55 9
+#STOP56 10
+#STOP57 11
+#STOP58 12
+#STOP59 13
+#STOP5A 14
+#STOP5B 15
+#STOP5C 16
+#STOP5D 1
+#STOP5E 2
+#STOP5F 3
+#STOP5G 4
+#STOP5H 5
+#STOP5I 6
+#STOP5J 7
+#STOP5K 8
+#STOP5L 9
+#STOP5M 10
+#STOP5N 11
+#STOP5O 12
+#STOP5P 13
+#STOP5Q 14
+#STOP5R 15
+#STOP5S 16
+#STOP5T 1
+#STOP5U 2
+#STOP5V 3
+#STOP5W 4
+#STOP5X 5
+#STOP5Y 6
+#STOP5Z 7
+#STOP60 8
+#STOP61 9
+#STOP62 10
+#STOP63 11
+#STOP64 12
+#STOP65 13
+#STOP66 14
+#STOP67 15
+#STOP68 16
+#STOP69 1
+#STOP6A 2
+#STOP6B 3
+#STOP6C 4
+#STOP6D 5
+#STOP6E 6
+#STOP6F 7
+#STOP6G 8
+#STOP6H 9
+#STOP6I 10
+#STOP6J 11
+#STOP6K 12
+#STOP6L 13
+#STOP6M 14
+#STOP6N 15
+#STOP6O 16
+#STOP6P 1
+#STOP6Q 2
+#STOP6R 3
+#STOP6S 4
+#STOP6T 5
+#STOP6U 6
+#STOP6V 7
+#STOP6W 8
+#STOP6X 9
+#STOP6Y 10
+#STOP6Z 11
+#STOP70 12
+#STOP71 13
+#STOP72 14
+#STOP73 15
+
+
+#00101:01050306020504060105030602050406
+#00101:0709080A0709080A0709080A0709080A
+#00104:01020304010203040102030401020304
+#00109:0102030405060708090A0B0C0D0E0F0G
+
+#00201:01050306020504060105030602050406
+#00201:0709080A0709080A0709080A0709080A
+#00204:01020304010203040102030401020304
+#00209:0H0I0J0K0L0M0N0O0P0Q0R0S0T0U0V0W
+
+#00301:01050306020504060105030602050406
+#00301:0709080A0709080A0709080A0709080A
+#00304:01020304010203040102030401020304
+#00309:0X0Y0Z101112131415161718191A1B1C
+
+#00401:01050306020504060105030602050406
+#00401:0709080A0709080A0709080A0709080A
+#00404:01020304010203040102030401020304
+#00409:1D1E1F1G1H1I1J1K1L1M1N1O1P1Q1R1S
+
+#00501:01050306020504060105030602050406
+#00501:0709080A0709080A0709080A0709080A
+#00504:01020304010203040102030401020304
+#00509:1T1U1V1W1X1Y1Z202122232425262728
+
+#00601:01050306020504060105030602050406
+#00601:0709080A0709080A0709080A0709080A
+#00604:01020304010203040102030401020304
+#00609:292A2B2C2D2E2F2G2H2I2J2K2L2M2N2O
+
+#00701:01050306020504060105030602050406
+#00701:0709080A0709080A0709080A0709080A
+#00704:01020304010203040102030401020304
+#00709:2P2Q2R2S2T2U2V2W2X2Y2Z3031323334
+
+#00801:01050306020504060105030602050406
+#00801:0709080A0709080A0709080A0709080A
+#00804:01020304010203040102030401020304
+#00809:35363738393A3B3C3D3E3F3G3H3I3J3K
+
+#00901:01050306020504060105030602050406
+#00901:0709080A0709080A0709080A0709080A
+#00904:01020304010203040102030401020304
+#00909:3L3M3N3O3P3Q3R3S3T3U3V3W3X3Y3Z40
+
+#01001:010000020000010200010000
+#01001:030000040000030400030000
+#01001:000500000600000500000600
+#01001:0709080A
+#01002:0.75
+#01004:01020304
+#01009:<span class="p">4243444G</span>
+
+#01101:01050306020504060105030602050406
+#01101:0709080A0709080A0709080A0709080A
+#01104:01020304010203040102030401020304
+#01109:004I4J4K4L4M4N4O4P4Q4R4S4T4U4V4W
+
+#01201:01050306020504060105030602050406
+#01201:0709080A0709080A0709080A0709080A
+#01204:01020304010203040102030401020304
+#01209:4X4Y4Z505152535455565758595A5B5C
+
+#01301:01050306020504060105030602050406
+#01301:0709080A0709080A0709080A0709080A
+#01304:01020304010203040102030401020304
+#01309:5D5E5F5G5H5I5J5K5L5M5N5O5P5Q5R5S
+
+#01401:01050306020504060105030602050406
+#01401:0709080A0709080A0709080A0709080A
+#01404:01020304010203040102030401020304
+#01409:5T5U5V5W5X5Y5Z606162636465666768
+
+#01501:01050306020504060105030602050406
+#01501:0709080A0709080A0709080A0709080A
+#01504:01020304010203040102030401020304
+#01509:696A6B6C6D6E6F6G6H6I6J6K6L6M6N6O
+
+#01601:01050306020504060105030602050406
+#01601:0709080A0709080A0709080A0709080A
+#01604:01020304010203040102030401020304
+#01609:6P6Q6R6S6T6U6V6W6X6Y6Z7071727300
+
+#01704:05
+#01716:0B
+
+
+</code></pre></figure></dd>
+
+          <dt>[Rhythm-it]</dt>
+          <dd><p>“<em>255 indexes by Base-36</em>”
+              vs “<em>hexadecimal channel-numbers</em>”.</p>
+            <p>“<code>#xxx09:<b>FF</b></code>” can refer
+              “<code>#stop<b>73</b> <var>n</var></code>”.</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE STOP for Rhythm-it
+#ARTIST Yamajet / 131
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 ohh.wav
+#WAV06 ohh.wav
+#WAV07 v_f.wav
+#WAV08 v_f.wav
+#WAV09 v_o.wav
+#WAV0A v_o.wav
+#WAV0B v_foon.wav
+
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp</code>
+
+// xxx09:01-FF (effective)
+<code>#STOP01 1
+#STOP02 2
+#STOP03 3
+#STOP04 4
+#STOP05 5
+#STOP06 6
+#STOP07 7
+#STOP08 8
+#STOP09 9
+#STOP0A 10
+#STOP0B 11
+#STOP0C 12
+#STOP0D 13
+#STOP0E 14
+#STOP0F 15
+#STOP0G 16
+#STOP0H 1
+#STOP0I 2
+#STOP0J 3
+#STOP0K 4
+#STOP0L 5
+#STOP0M 6
+#STOP0N 7
+#STOP0O 8
+#STOP0P 9
+#STOP0Q 10
+#STOP0R 11
+#STOP0S 12
+#STOP0T 13
+#STOP0U 14
+#STOP0V 15
+#STOP0W 16
+#STOP0X 1
+#STOP0Y 2
+#STOP0Z 3
+#STOP10 4
+#STOP11 5
+#STOP12 6
+#STOP13 7
+#STOP14 8
+#STOP15 9
+#STOP16 10
+#STOP17 11
+#STOP18 12
+#STOP19 13
+#STOP1A 14
+#STOP1B 15
+#STOP1C 16
+#STOP1D 1
+#STOP1E 2
+#STOP1F 3
+#STOP1G 4
+#STOP1H 5
+#STOP1I 6
+#STOP1J 7
+#STOP1K 8
+#STOP1L 9
+#STOP1M 10
+#STOP1N 11
+#STOP1O 12
+#STOP1P 13
+#STOP1Q 14
+#STOP1R 15
+#STOP1S 16
+#STOP1T 1
+#STOP1U 2
+#STOP1V 3
+#STOP1W 4
+#STOP1X 5
+#STOP1Y 6
+#STOP1Z 7
+#STOP20 8
+#STOP21 9
+#STOP22 10
+#STOP23 11
+#STOP24 12
+#STOP25 13
+#STOP26 14
+#STOP27 15
+#STOP28 16
+#STOP29 1
+#STOP2A 2
+#STOP2B 3
+#STOP2C 4
+#STOP2D 5
+#STOP2E 6
+#STOP2F 7
+#STOP2G 8
+#STOP2H 9
+#STOP2I 10
+#STOP2J 11
+#STOP2K 12
+#STOP2L 13
+#STOP2M 14
+#STOP2N 15
+#STOP2O 16
+#STOP2P 1
+#STOP2Q 2
+#STOP2R 3
+#STOP2S 4
+#STOP2T 5
+#STOP2U 6
+#STOP2V 7
+#STOP2W 8
+#STOP2X 9
+#STOP2Y 10
+#STOP2Z 11
+#STOP30 12
+#STOP31 13
+#STOP32 14
+#STOP33 15
+#STOP34 16
+#STOP35 1
+#STOP36 2
+#STOP37 3
+#STOP38 4
+#STOP39 5
+#STOP3A 6
+#STOP3B 7
+#STOP3C 8
+#STOP3D 9
+#STOP3E 10
+#STOP3F 11
+#STOP3G 12
+#STOP3H 13
+#STOP3I 14
+#STOP3J 15
+#STOP3K 16
+#STOP3L 1
+#STOP3M 2
+#STOP3N 3
+#STOP3O 4
+#STOP3P 5
+#STOP3Q 6
+#STOP3R 7
+#STOP3S 8
+#STOP3T 9
+#STOP3U 10
+#STOP3V 11
+#STOP3W 12
+#STOP3X 13
+#STOP3Y 14
+#STOP3Z 15
+#STOP40 16
+#STOP41 1
+#STOP42 2
+#STOP43 3
+#STOP44 4
+#STOP45 5
+#STOP46 6
+#STOP47 7
+#STOP48 8
+#STOP49 9
+#STOP4A 10
+#STOP4B 11
+#STOP4C 12
+#STOP4D 13
+#STOP4E 14
+#STOP4F 15
+#STOP4G 16
+#STOP4H 1
+#STOP4I 2
+#STOP4J 3
+#STOP4K 4
+#STOP4L 5
+#STOP4M 6
+#STOP4N 7
+#STOP4O 8
+#STOP4P 9
+#STOP4Q 10
+#STOP4R 11
+#STOP4S 12
+#STOP4T 13
+#STOP4U 14
+#STOP4V 15
+#STOP4W 16
+#STOP4X 1
+#STOP4Y 2
+#STOP4Z 3
+#STOP50 4
+#STOP51 5
+#STOP52 6
+#STOP53 7
+#STOP54 8
+#STOP55 9
+#STOP56 10
+#STOP57 11
+#STOP58 12
+#STOP59 13
+#STOP5A 14
+#STOP5B 15
+#STOP5C 16
+#STOP5D 1
+#STOP5E 2
+#STOP5F 3
+#STOP5G 4
+#STOP5H 5
+#STOP5I 6
+#STOP5J 7
+#STOP5K 8
+#STOP5L 9
+#STOP5M 10
+#STOP5N 11
+#STOP5O 12
+#STOP5P 13
+#STOP5Q 14
+#STOP5R 15
+#STOP5S 16
+#STOP5T 1
+#STOP5U 2
+#STOP5V 3
+#STOP5W 4
+#STOP5X 5
+#STOP5Y 6
+#STOP5Z 7
+#STOP60 8
+#STOP61 9
+#STOP62 10
+#STOP63 11
+#STOP64 12
+#STOP65 13
+#STOP66 14
+#STOP67 15
+#STOP68 16
+#STOP69 1
+#STOP6A 2
+#STOP6B 3
+#STOP6C 4
+#STOP6D 5
+#STOP6E 6
+#STOP6F 7
+#STOP6G 8
+#STOP6H 9
+#STOP6I 10
+#STOP6J 11
+#STOP6K 12
+#STOP6L 13
+#STOP6M 14
+#STOP6N 15
+#STOP6O 16
+#STOP6P 1
+#STOP6Q 2
+#STOP6R 3
+#STOP6S 4
+#STOP6T 5
+#STOP6U 6
+#STOP6V 7
+#STOP6W 8
+#STOP6X 9
+#STOP6Y 10
+#STOP6Z 11
+#STOP70 12
+#STOP71 13
+#STOP72 14
+#STOP73 15</code>
+
+<span class="n">// xxx09:FG-FZ (unavailable / <span class="a">abnormal end</span>)</span>
+<code>#STOP<span class="n">74</span> 16
+
+#STOP<span class="n">75</span> 1
+#STOP<span class="n">76</span> 2
+#STOP<span class="n">77</span> 3
+#STOP<span class="n">78</span> 4
+#STOP<span class="n">79</span> 5
+#STOP<span class="n">7A</span> 6
+#STOP<span class="n">7B</span> 7
+#STOP<span class="n">7C</span> 8
+#STOP<span class="n">7D</span> 9
+#STOP<span class="n">7E</span> 10
+#STOP<span class="n">7F</span> 11
+#STOP<span class="n">7G</span> 12
+#STOP<span class="n">7H</span> 13
+#STOP<span class="n">7I</span> 14
+#STOP<span class="n">7J</span> 15
+#STOP<span class="n">7K</span> 16</code>
+...
+
+<code>#00101:01050306020504060105030602050406
+#00101:0709080A0709080A0709080A0709080A
+#00104:01020304010203040102030401020304
+#00109:0102030405060708090A0B0C0D0E0F10
+
+#00201:01050306020504060105030602050406
+#00201:0709080A0709080A0709080A0709080A
+#00204:01020304010203040102030401020304
+#00209:1112131415161718191A1B1C1D1E1F20
+
+#00301:01050306020504060105030602050406
+#00301:0709080A0709080A0709080A0709080A
+#00304:01020304010203040102030401020304
+#00309:2122232425262728292A2B2C2D2E2F30
+
+#00401:01050306020504060105030602050406
+#00401:0709080A0709080A0709080A0709080A
+#00404:01020304010203040102030401020304
+#00409:3132333435363738393A3B3C3D3E3F40
+
+#00501:01050306020504060105030602050406
+#00501:0709080A0709080A0709080A0709080A
+#00504:01020304010203040102030401020304
+#00509:4142434445464748494A4B4C4D4E4F50
+
+#00601:01050306020504060105030602050406
+#00601:0709080A0709080A0709080A0709080A
+#00604:01020304010203040102030401020304
+#00609:5152535455565758595A5B5C5D5E5F60
+
+#00701:01050306020504060105030602050406
+#00701:0709080A0709080A0709080A0709080A
+#00704:01020304010203040102030401020304
+#00709:6162636465666768696A6B6C6D6E6F70
+
+#00801:01050306020504060105030602050406
+#00801:0709080A0709080A0709080A0709080A
+#00804:01020304010203040102030401020304
+#00809:7172737475767778797A7B7C7D7E7F80
+
+#00901:01050306020504060105030602050406
+#00901:0709080A0709080A0709080A0709080A
+#00904:01020304010203040102030401020304
+#00909:8182838485868788898A8B8C8D8E8F90
+
+#01001:01050306020504060105030602050406
+#01001:0709080A0709080A0709080A0709080A
+#01004:01020304010203040102030401020304
+#01009:9192939495969798999A9B9C9D9E9FA0
+
+#01101:01050306020504060105030602050406
+#01101:0709080A0709080A0709080A0709080A
+#01104:01020304010203040102030401020304
+#01109:A1A2A3A4A5A6A7A8A9AAABACADAEAFB0
+
+#01201:01050306020504060105030602050406
+#01201:0709080A0709080A0709080A0709080A
+#01204:01020304010203040102030401020304
+#01209:B1B2B3B4B5B6B7B8B9BABBBCBDBEBFC0
+
+#01301:01050306020504060105030602050406
+#01301:0709080A0709080A0709080A0709080A
+#01304:01020304010203040102030401020304
+#01309:C1C2C3C4C5C6C7C8C9CACBCCCDCECFD0
+
+#01401:01050306020504060105030602050406
+#01401:0709080A0709080A0709080A0709080A
+#01404:01020304010203040102030401020304
+#01409:D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0
+
+#01501:01050306020504060105030602050406
+#01501:0709080A0709080A0709080A0709080A
+#01504:01020304010203040102030401020304
+#01509:E1E2E3E4E5E6E7E8E9EAEBECEDEEEFF0
+
+#01601:01050306020504060105030602050406
+#01601:0709080A0709080A0709080A0709080A
+#01604:01020304010203040102030401020304
+#01609:F1F2F3F4F5F6F7F8F9FAFBFCFDFEFF<span class="n">FG</span>
+
+#01701:01050306020504060105030602050406
+#01701:0709080A0709080A0709080A0709080A
+#01704:05020304010203040102030401020304
+#01709:<span class="n">FHFIFJFKFLFMFNFOFPFQFRFSFTFUFVFW</span>
+
+#01816:0B
+#01804:05
+
+
+</code></pre></figure></dd>
+        </dl></dd>
+
+
+      <dt>Minimum/<wbr>Maximum column:</dt>
+      <dd><p>The range of the value which can be specified.</p>
+        <dl>
+          <dt>[BGAEncoder]</dt>
+          <dd><p>When a value is smaller than <code>-8947</code>,
+              an image sequence does not skip.</p>
+            <p>When a value is larger than <code>8947</code>,
+              BGAEncoder is <em>ended abnormally</em>.
+              (E.g. “<code>#STOP01 8948</code>”)</p>
+            <p>When a value is about <code>19200</code> to <code>26000</code>,
+              playback time of outputted videofile is inaccurate.</p>
+            <p>When the number of musical measures is <code>#250</code>
+              or more, BGAEncoder is <em>ended abnormally</em>.</p>
+            <p>When playback time of the outputted videofile becomes larger
+              than 213 seconds, BGAEncoder is <em>ended abnormally</em>.</p></dd>
+        </dl></dd>
+
+
+      <dt><code>1E+2</code> column:</dt>
+      <dd><p>Exponential value
+          “<code>#STOP01 <b>1E+2</b></code>”</p></dd>
+
+
+      <dt>Negative column:</dt>
+      <dd><p>Negative number “<code>#STOP01 <b>-45</b></code>”</p>
+        <dl>
+          <dt>[Rhythm-it]</dt>
+          <dd><p>If <code>#STOP</code> value is <code>-1</code> or less,
+              <code>-1</code> is applied. Scrolling is not skipped.</p>
+            <p>This value is almost equal to the situation
+              where a <code>#STOP</code> object does not exist,
+              although slight lugs occur.</p>
+            <p>If <code>#STOP</code> values are the negative decimal fractions
+              from <code>0</code> to <code>-1</code>,
+              <code>0</code> is applied.</p>
+            <figure><pre><code>#PLAYER 1
+#GENRE Test
+#TITLE (^^) [STOP 0 Query]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+#TOTAL 200
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0A bass.wav
+#WAV0B ohh.wav
+
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp
+
+#STOP01 0
+#STOP02 -0.01
+#STOP03 -1
+#STOP04 -45
+#STOP05 a
+#STOP06
+//STP07 undefined
+#STOP08 1
+
+#00003:00000000000000000000000000000006
+#00101:0102010201020102010201020102010201020102010201020102010201020102<!--
+    -->0102010201020102010201020102010201020102010201020102010201020102<!--
+    -->0102010201020102010201020102010201020102010201020102010201020102
+#00101:0304030403040304030403040304030403040304030403040304030403040304<!--
+    -->0304030403040304030403040304030403040304030403040304030403040304<!--
+    -->0304030403040304030403040304030403040304030403040304030403040304
+#00101:0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A<!--
+    -->0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A<!--
+    -->0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A
+#00101:000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B
+#00104:0102030401020304010203040102030401020304010203040102030401020304<!--
+    -->0102030401020304010203040102030401020304010203040102030401020304<!--
+    -->0102030401020304010203040102030401020304010203040102030401020304
+#00109:0101010101010101020202020202020203030303030303030404040404040404<!--
+    -->0505050505050505060606060606060607070707070707070808080808080808<!--
+    -->0000000000000000030303030303030300000000000000000404040404040404<!--
+    -->0000000000000000030303030303030300000000000000000404040404040404<!--
+    -->0101010101010101020202020202020203030303030303030404040404040404<!--
+    -->0505050505050505060606060606060607070707070707070808080808080808
+#00112:0006070000060700000607000006070000060700000607000006070000060700<!--
+    -->0006070000060700000607000006070000060700000607000006070000060700<!--
+    -->0006070000060700000607000006070000060700000607000006070000060700
+#00114:050505050505050505050505050505050505050505050505
+#00115:0000000800000008000000080000000800000008000000080000000800000008<!--
+    -->0000000800000008000000080000000800000008000000080000000800000008<!--
+    -->0000000800000008000000080000000800000008000000080000000800000008
+
+#00203:FF
+#00204:05
+#00216:09
+
+
+</code></pre></figure></dd>
+
+          <dt>[nanasigroove]</dt>
+          <dd><p><code><b>0.1</b></code> is applied if a value is
+              less than <code>0.1</code>.
+              (E.g. <code>0.01</code>, <code>0</code>, <code>-45</code>)</p></dd>
+
+          <dt>[Lunatic Rave 2]</dt>
+          <dd><p>Only a positive integer is received.</p>
+            <p>All other values are evaluated as
+              “<code>#STOPxx <b>-1</b></code>”.</p>
+            <p>That is, <strong>the distance of
+              <b>one</b> 192nd note is skipped</strong>.</p></dd>
+
+          <dt>[BMIIDXView2010]</dt>
+          <dd><p>When you test, you <em>must</em> open
+              “<code>BMIIDXView2010.ini</code>”
+              and change the value of the <code>SYNTAXCHECK</code> key
+              into <code>0</code> (instead of <code>1</code>).</p></dd>
+
+          <dt>[<i>skippable apps</i>]</dt>
+          <dd><p>Skipping will be chained if a negative <code>#STOP</code>
+              is in the section skipped further.
+              Some apps may have interexchangeable behavior.</p></dd>
+
+          <dt>Note:</dt>
+          <dd><p>Implementation which ignores negative <code>#STOP</code> time
+              as the stop time <code>0</code> is based on
+              the <code>#STOP</code> specification of
+              “Delight Delight Reduplication”.</p>
+            <p>(By my mistake,
+              this background color seems to show the bad thing.)</p></dd>
+        </dl></dd>
+
+
+      <dt>Zero column:</dt>
+      <dd><p>“<code>#STOP01 <b>0</b></code>”</p>
+        <dl>
+          <dt>[PMSee-V]</dt>
+          <dd><p>Whatever the value, all the <code>#STOP</code> objects
+              rewind scrolling slightly.</p>
+            <p>This processing precedes rather than all the objects
+              of the others in the same position.</p>
+            <p>Songs will be playbacked
+              <em>in a different style from other apps</em>, when BPM is late,
+              to such an extent that this processing is sighted,
+              although this processing is not usually conspicuous.</p></dd>
+
+          <dt>[Rhythm-it]</dt>
+          <dd><p><em>RDM's “<code>#STOPxx <b>0</b></code>” is
+              equal to “<code>#STOPxx <b>0.2</b></code>”</em>
+              in implementations which support a fractional value.</p>
+            <p>This delay is equally applied also to
+              a character string value or an undefined value.</p></dd>
+
+          <dt>[ruv-it!]</dt>
+          <dt>[Angolmois 2.0 alpha 3] (Excluding Exclusive mode)</dt>
+          <dt>[Angolmois Rust Edition] (Excluding Exclusive mode)</dt>
+          <dd><p><em><code>#STOPxx 0</code> objects delay scrolling.</em></p>
+            <figure><figcaption><p>Add to “<code>foon_5n.bms</code>”
+                  as follows:</p></figcaption><pre><code>#STOP01 0
+#00109:0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101
+#00209:0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101
+#00309:0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101
+#00409:0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101<!--
+    -->0101010101010101010101010101010101010101010101010101010101010101
+
+
+</code></pre></figure>
+            <p>Keep in mind that <em>these implementations cannot disregard
+              cost for using <code>#STOP</code> objects</em>.</p></dd>
+
+          <dt>[WAview]</dt>
+          <dd><p><em><code>#STOPxx 0</code> objects accelerate scrolling.</em>
+              (If you don't mind,
+              please test the above-mentioned sample.)</p></dd>
+
+          <dt>[nanasigroove]</dt>
+          <dd><p><code><b>0.1</b></code> is applied if a value is
+              less than <code>0.1</code>.
+              (E.g. <code>0.01</code>, <code>0</code>, <code>-45</code>)</p></dd>
+
+          <dt>[BMx Sequence Editor]</dt>
+          <dt>[iBMS BMS Creator]</dt>
+          <dd><p><code>#STOP</code> objects
+              whose value are <code>0</code> appear on GUI chart.</p>
+            <p>When saved, without our deleting these,
+              the channel <code>#xxx09</code> continues having objects
+              which refer to an undefined value.</p>
+            <p>(Furthermore, iBMS BMS Creator continues having
+              “<code>#STOPxx 0</code>”.)</p></dd>
+        </dl></dd>
+
+
+      <dt>String column:</dt>
+      <dd><p>“<code>#STOP01 <b>a</b></code>”</p>
+        <dl>
+          <dt>[nanasigroove]</dt>
+          <dd><p>Equivalent to “<code>#STOP01 24</code>”</p></dd>
+
+          <dt>[BMX2WAV] Dialog box says:</dt>
+          <dd><p>“Do you ignore this scroll object
+              and continue?”</p>
+            <p>Yes: Equivalent to “<code>#STOP01 0</code>”.</p>
+            <p>No: Conversion is stopped.</p></dd>
+        </dl></dd>
+
+
+      <dt><code>#STOP01<b>␣</b></code> column:</dt>
+      <dd><p>Command + delimiter (<em>without value</em>)</p></dd>
+
+
+      <dt><code>#STOP01</code> column:</dt>
+      <dd><p>Command only (<em>without delimiter and value</em>)</p></dd>
+
+
+      <dt>Lone <code>09</code> column:</dt>
+      <dd><p>The channel <code>09</code> which refers to
+          <em>undefined <code>#STOP</code> indexes</em>.
+          (E.g. “<code>#00109:01</code>”
+          without “<code>#STOP01</code>”)</p></dd>
+
+
+      <dt><code>02</code> column:</dt>
+      <dd><p>The <code>#STOP</code> time <em>must not</em> be dependent
+          on the value of the channel <code>02</code>.</p></dd>
+
+      <dt><code>03</code> vs <code>09</code> column:</dt>
+      <dd><p>When the channels <code>#xxx<b>03</b></code> and
+          <code>#xxx<b>09</b></code> <em>compete on the same timeline</em>.</p>
+        <figure><figcaption><p>Note: This BMS terminates PMSee-V <em>abnormally</em>.</p></figcaption><pre><code>#00203:8C
+#00108:01
+#00209:02
+#00109:010000010000010000010000010101
+
+#00101:010000020000010200010000010201
+#00101:030000040000030400030000030403
+#00101:000B00000B00000B00000B00000B00
+#00101:0A00000A00000A0A000A00000A0A0A
+#00201:02
+#00201:04
+#00201:0B
+#00201:0A
+
+#00104:010000020000030000040000010203
+#00112:000000060000070000000000000607
+#00114:0500000005
+#00115:0000000800
+#00204:0405
+#00215:08
+#00216:0009
+
+#00102:0.078125
+#00202:0.09375
+
+#PLAYER 1
+#GENRE Test
+#TITLE (^^) [Precision]
+#ARTIST Yamajet
+#SUBARTIST BGA: cyclia
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+#TOTAL 200
+#STAGEFILE title.bmp
+#BANNER _banner.bmp
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0A bass.wav
+#WAV0B ohh.wav
+#BMP01 cyc-foonmain_00008.bmp
+#BMP02 cyc-foonmain_00024.bmp
+#BMP03 cyc-foonmain_00040.bmp
+#BMP04 cyc-foonmain_00056.bmp
+#BMP05 cyc-last_00014.bmp
+#BPM01 11.66666
+#STOP01 1
+#STOP02 36
+
+
+</code></pre></figure>
+        <dl>
+          <dt>Note:</dt>
+          <dd><p>It is difficult for me to investigate Sorting Algorithms.</p>
+            <p>Some results of an investigation in this table
+              may contain the error.</p>
+            <p>However, it is certain that an order of parsing commandlines
+              does not have compatibility.</p></dd>
+        </dl></dd>
+
+
+      <dt><code>08</code> vs <code>09</code> column:</dt>
+      <dd><p>When the channels <code>#xxx<b>08</b></code> and
+          <code>#xxx<b>09</b></code> <em>compete on the same timeline</em>.</p>
+        <figure><figcaption><p>Add to <code>foon_5n.bms</code> as follows:</p></figcaption><table>
+            <thead>
+              <tr>
+                <th scope="col"><code>08</code> vs <code>09</code></th>
+                <th scope="col"><code>09</code> vs <code>08</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><pre><code>#BPM02 560
+#STOP01 48
+#00203:00000000008C0000
+#002<b>08</b>:0002
+#00209:0001</code></pre></td>
+                <td><pre><code>#BPM02 560
+#STOP01 48
+#00203:00000000008C0000
+#00209:0001
+#002<b>08</b>:0002</code></pre></td>
+              </tr>
+            </tbody>
+          </table></figure>
+        <dl>
+          <dt>[unofficial nazobmplay]</dt>
+          <dd><p>“<code>08</code> vs <code>09</code>”
+              has <em>too long <code>#STOP</code></em>.</p>
+            <p>“<code>09</code> vs <code>08</code>”
+              works as expected.</p></dd>
+
+          <dt>[Feeling Pomu 2nd]</dt>
+          <dd><p>Both have <em>too long <code>#STOP</code></em>.</p>
+            <p>If “<code>#002<b>03</b>:...</code>” is removed,
+              both will succeed. Don't ask me why.</p></dd>
+
+          <dt>[forgetalia]</dt>
+          <dt>[forgetalia++]</dt>
+          <dt>[forgetalia#]</dt>
+          <dt>[Angolmois Rust Edition]</dt>
+          <dd><p>“<code>09</code> vs <code>08</code>”
+              has <em>too long <code>#STOP</code></em>.</p></dd>
+
+          <dt>[Angolmois 2.0 alpha 3]</dt>
+          <dd><p>Both have <em>too long <code>#STOP</code></em>.</p></dd>
+        </dl></dd>
+
+
+      <dt>Fraction column:</dt>
+      <dd><p>Some decimal fraction values are compared.</p>
+        <p>In order to maximize the influence of <code>#STOP</code>, the rhythm
+          which divides one musical measure into 192 equally is described.</p>
+        <p>In order to avoid the bug of some implementations, changed BPM
+          is rounded to <code>6</code> (instead of <code>5.8333...</code>).</p>
+        <figure><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [stop <var><b>2.9</b></var>]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 0
+#TOTAL 83
+#STAGEFILE title.bmp
+#BANNER _banner.bmp
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0A bass.wav
+#WAV0B ohh.wav
+
+#BMP09 cyc-foonmain_00008.bmp
+#BMP19 cyc-foonmain_00024.bmp
+#BMP29 cyc-foonmain_00040.bmp
+#BMP39 cyc-foonmain_00056.bmp
+#BMP4F cyc-last_00014.bmp
+
+#STOP01 <var><b>2.9</b></var>
+
+#00003:0000000000000000000000000000000000000000000000000000000000000006
+#00101:0100020001020100010201020000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00101:0300040003040300030403040000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00101:000B000B000B000B000B000B0000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00101:0A000A000A0A0A000A0A0A0A0000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00101:0500060007000800050607080009000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00103:00000000000000000000000000FF000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00104:090019002900390009192939004F000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000
+#00109:00010000000000000000000000000000
+#00316:09
+
+
+</code></pre></figure>
+        <dl>
+          <dt><span class="n">Truncate</span>:</dt>
+          <dd><p>Rounding to integer - round towards zero;
+              even negative number</p></dd>
+
+          <dt><span class="n">Round</span>:</dt>
+          <dd><p>Rounding to integer - round to the nearest integer</p>
+            <p>(Round half to even number;
+              <code>0.5</code> becomes <code>0</code>,
+              <code>1.5</code> becomes <code>2</code>,
+              <code>2.5</code> becomes <code>2</code>)</p></dd>
+
+          <dt>[BMX2WAV] Dialog box says:</dt>
+          <dd><p>“Do you ignore this scroll object
+              and continue?”</p>
+            <p>Yes: Equivalent to “<code>#STOP01 0</code>”.
+              (Even if a value is <code>192.1</code>.)</p>
+            <p>No: Conversion is stopped.</p></dd>
+        </dl></dd>
+
+
+      <dt>Grading column:</dt>
+      <dd><p>Does grading system have strict consistency
+          as a rhythm action or not?</p>
+        <figure><pre><code>#TITLE Stopped note's grading
+#RANK 0
+#BPM 120
+#STOP01 480
+#00109:01
+#00115:11</code></pre></figure>
+        <dl>
+          <dt>[Delight Delight Reduplication]</dt>
+          <dt>[Lunatic Rave 2]</dt>
+          <dt>[ruv-it!]</dt>
+          <dd><p><strong>Grading area is not dependent on
+              <code>#STOP</code> time.</strong></p></dd>
+
+          <dt>[<i>other apps</i>]</dt>
+          <dd><p><em>While this note has stopped, the best grade is given
+              to all the timing to which players process this note.</em></p></dd>
+        </dl></dd>
+
+
+      <dt>Micro column:</dt>
+      <dd><p>Scrolling slowly, a detailed rhythm, and
+          “<code>#STOPxx <b>1</b></code>” are combined.</p>
+        <figure><pre><code>#PLAYER 1
+#GENRE Foon
+#TITLE (^^) [Micro]
+#ARTIST Yamajet
+#BPM 140
+#PLAYLEVEL 1
+#RANK 3
+#TOTAL 200
+%URL http://www.yamajet.com/archives/43
+
+#WAV01 kick.wav
+#WAV02 kick.wav
+#WAV03 clap.wav
+#WAV04 clap.wav
+#WAV05 v_f.wav
+#WAV06 v_o.wav
+#WAV07 v_o.wav
+#WAV08 v_n.wav
+#WAV09 v_foon.wav
+#WAV0A bass.wav
+#WAV0B ohh.wav
+
+#BMP09 cyc-foonmain_00008.bmp
+#BMP19 cyc-foonmain_00024.bmp
+#BMP29 cyc-foonmain_00040.bmp
+#BMP39 cyc-foonmain_00056.bmp
+
+#BPM01 5.833333
+#STOP01 1
+
+#00008:00000000000000000000000000000001
+#00101:0102010201020102010201020102010201020102010201020102010201020102<!--
+    -->0102010201020102010201020102010201020102010201020102010201020102<!--
+    -->0102010201020102010201020102010201020102010201020102010201020102
+#00101:0304030403040304030403040304030403040304030403040304030403040304<!--
+    -->0304030403040304030403040304030403040304030403040304030403040304<!--
+    -->0304030403040304030403040304030403040304030403040304030403040304
+#00101:0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A<!--
+    -->0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A<!--
+    -->0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A
+#00101:000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B<!--
+    -->000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B000B
+#00103:0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->0000000000000000000000000000000000000000000000000000000000000000<!--
+    -->00000000000000000000000000000000000000000000000000000000000000FF
+#00104:0919293909192939091929390919293909192939091929390919293909192939<!--
+    -->0919293909192939091929390919293909192939091929390919293909192939<!--
+    -->0919293909192939091929390919293909192939091929390919293909192939
+#00109:010101010101010101010101010101010101010101010101
+#00112:0006070000060700000607000006070000060700000607000006070000060700<!--
+    -->0006070000060700000607000006070000060700000607000006070000060700<!--
+    -->0006070000060700000607000006070000060700000607000006070000060700
+#00114:050505050505050505050505050505050505050505050505
+#00115:0000000800000008000000080000000800000008000000080000000800000008<!--
+    -->0000000800000008000000080000000800000008000000080000000800000008<!--
+    -->0000000800000008000000080000000800000008000000080000000800000008
+
+
+</code></pre></figure>
+        <dl>
+          <dt>[Feeling Pomu 2nd]</dt>
+          <dd><p>Sounds on the same timeline as <code>#STOP</code> object
+              may be reproduced <em>after re-scrolling</em>.</p>
+            <p>Images are not subject to the influence
+              of <code>#STOP</code>.</p>
+            <p>Even the channels for changing BPM may not be subject
+              to the influence of <code>#STOP</code>.</p></dd>
+
+          <dt>[PMSee-V]</dt>
+          <dd><p><code>#STOP</code> is evaluated
+              <em>before</em> all other sounds.</p>
+            <p>PMSee-V is poor also at the channel <code>#xxx02</code>.</p>
+            <p>(If you don't mind, please test re-saved
+              “<code>03</code> vs <code>09</code>” sample
+              by BMx Sequence Editor.)</p></dd>
+
+          <dt>[unofficial nazobmplay]</dt>
+          <dd><p>nazobmplay cannot playback the sample of
+              “<code>03</code> vs <code>09</code>”
+              column correctly, even if that is re-saved
+              by BMx Sequence Editor.</p></dd>
+
+          <dt>[Ninja Agent GALLI]</dt>
+          <dd><p>When changed BPM includes a decimal fraction,
+              a chart scrolls slowly rather than the specified value.</p></dd>
+          <dd><p>When BPM is extremely late, the note drawn is processed
+              a little early than actual timing.</p>
+            <p>(About the already cut note in a normal mode,
+              or in the AutoPlay mode, notes are playbacked ahead of BGM.)</p></dd>
+          <dd><p>When BPM is extremely late, <em><code>#STOP</code> time
+              is shortened</em> rather than the specified value.</p></dd>
+
+          <dt>[forgetalia]</dt>
+          <dt>[forgetalia++]</dt>
+          <dt>[BGAEncoder]</dt>
+          <dd><p>When changed BPM includes a decimal fraction,
+              a chart scrolls slowly rather than the specified value.</p></dd>
+
+          <dt>[charatbeatHDX VIOLET]</dt>
+          <dd><p>In the AutoPlay mode, as for the playable notes
+              on the same timeline as <code>#STOP</code> object,
+              sound-playing may be ceased.</p></dd>
+        </dl></dd>
+
+    </dl>
+
+
+</body></html>

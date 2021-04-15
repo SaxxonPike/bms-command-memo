@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/* † */
+
+html {
+    background: #EEE;
+    color: #222;
+    font-family:
+        Helvetica,
+        Verdana,
+        'Lucida Grande',
+        Lucida,
+        Arial,
+        sans-serif;
+}
+
+body {
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 80em;
+    padding: 0 .5em 0;
+}
+
+code,
+kbd,
+pre,
+samp,
+.t2 dl {
+    font-family:
+        Consolas,
+        'Lucida Grande',
+        'Hiragino Kaku Gothic ProN',
+        Meiryo,
+        monospace,
+        serif;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-size: 1em;
+}
+
+code {
+    background: #E4E4E4;
+    color: #0F2F2F;
+    white-space: nowrap;
+}
+
+em,
+em code {
+    background: #EEE;
+    color: #800;
+    font-style: normal;
+}
+
+strong {
+    background: #EEE;
+    color: #4B0082;
+}
+
+ol,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style-position: inside;
+}
+
+span,
+.eod {
+    font-size: 80%;
+}
+
+dt {
+    background: #DDD;
+    color: #222;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: .5em;
+}
+
+h5 {
+    font-family:
+        Consolas,
+        'Lucida Grande',
+        'Hiragino Kaku Gothic ProN',
+        Meiryo,
+        monospace,
+        serif;
+    font-size: 1.24em;
+    margin: 0;
+    padding-top: .5em;
+}
+
+.t1 i {
+    display: none;
+}
+
+.t2 dl {
+    font-size: 90%;
+}
+
+.eod {
+    margin: 2em 0 10em;
+}
+
+/* 1024x768 :: 64em ?? */
+@media screen and (min-width: 64em) {
+
+    .t1~.t1 dt,
+    .t2~.t2 dt,
+    .t3~.t3 dt {
+        background: #EEE;
+        color: #222;
+    }
+
+    
+    .t1,
+    .t2,
+    .t3 {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .t2 {
+        max-width: 64em;
+    }
+
+    h3:not(.o) {
+        display: table-caption;
+    }
+
+    .t1 dl,
+    .t2 dl,
+    .t3 dl {
+        display: table-row;
+    }
+
+    .t1 dt,
+    .t2 dt,
+    .t3 dt,
+    .t1~.t1 dd,
+    .t2~.t2 dd,
+    .t3~.t3 dd {
+        display: table-cell;
+    }
+
+    h2+.t1 dt,
+    h3+.t2 dt,
+    h2+.t3 dt {
+        font-weight: bold;
+    }
+
+    h2+.t1 dt,
+    h2+.t3 dt,
+    .t1~.t1 dl:nth-child(even) dt,
+    .t1~.t1 dl:nth-child(even) dd,
+    .t3~.t3 dl:nth-child(even) dt,
+    .t3~.t3 dl:nth-child(even) dd {
+        background: #DDD;
+        color: #222;
+    }
+
+    dl:nth-child(even) strong {
+        background: #DDD;
+        color: #4B0082;
+    }
+
+    .t1~.t1 dl:nth-child(even) em,
+    .t1~.t1 dl:nth-child(even) em code {
+        background: #DDD;
+        color: #800;
+    }
+
+    h2+.t1 dd,
+    h3+.t2 dd,
+    h2+.t3 dd,
+    .t2 i {
+        display: none;
+    }
+
+    .t1 dt:first-child {
+        width: 13em;
+    }
+
+    .t3 dt:first-child {
+        width: 14em;
+    }
+
+    .t1~.t1 dt+dt,
+    h2+.t1 dt:first-child+dd+dt {
+        width: 11.5em;
+    }
+
+    .t1~.t1 dt+dd,
+    .t3~.t3 dt+dd,
+    h2+.t1 dt:first-child+dd+dt+dd+dt,
+    h2+.t3 dt:first-child+dd+dt {
+        width: 7em;
+    }
+
+    .t2 dt~dt,
+    .t2 dd {
+        text-align: right;
+        padding-right: 1em;
+    }
+
+}
+
+@media screen and (max-width: 63.9em) {
+
+    h3+.t2 dt~dt~dt~dt~dt,
+    h3+.t2~.t2 dd {
+        margin: 0;
+        display: inline-block;
+    }
+
+    .t2~.t2 dt+dd,
+    .t2~.t2 dt+dd+dd,
+    .t2~.t2 dt+dd+dd+dd {
+        width: 98%;
+    }
+
+    h3+.t2 dt~dt~dt~dt~dt:not(:last-of-type)::after,
+    .t2~.t2 dt+dd+dd+dd~dd:not(:last-of-type)::after {
+        content: ',';
+    }
+
+    .t2~.t2 dt+dd::before {
+        content: 'INIT:\20';
+    }
+
+    .t2~.t2 dt+dd+dd::before {
+        content: 'CLEAR:\20';
+    }
+
+    .t2~.t2 dt+dd+dd+dd::before {
+        content: 'FAILED:\20';
+    }
+
+}
+

@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://hitkey.nekokan.dyndns.info/option.htm -->
+<html itemscope="" itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- † -->
+    <title itemprop="name">BMS #OPTION command</title>
+    <link rel="stylesheet" type="text/css" href="content/option-css.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="hitkey">
+    <meta name="description" content="The list of values of the #OPTION command of BMS (Be-Music)">
+  </head>
+  <body>
+    <h1>BMS <code><a accesskey="0" href="#OPTION">#OPTION</a></code> command</h1>
+    <dl>
+      <dt>Update history:</dt>
+      <dd><ul>
+          <li><time itemprop="dateModified" datetime="2016-03-02T05:26:30+09:00">2016-03-02</time>: charatbeatHDX v1.10
+            (<time datetime="2016-02-14">2016-02-14</time>)</li>
+          <li><time datetime="2014-07-08T07:30:00+09:00">2014-07-08</time>: Sonorous 0.1.0-pre
+            (<time datetime="2014-07-08">2014-07-08</time>)</li>
+          <li><time datetime="2014-06-29T22:31:00+09:00">2014-06-29</time>: charatbeatHDX v1.05</li>
+          <li><time datetime="2014-06-19T19:22:00+09:00">2014-06-19</time>: TechnicalGroove suspended</li>
+          <li><time datetime="2014-06-08T22:06:00+09:00">2014-06-08</time>: charatbeatHDX v1.04</li>
+          <li><time datetime="2014-05-25T23:50:00+09:00">2014-05-25</time>: charatbeatHDX v1.03</li>
+          <li><time datetime="2014-02-03T06:06:00+09:00">2013-02-03</time>: charatbeatHDX v1.02, Sonorous 0.1.0-pre
+            (<time datetime="2014-01-31">2014-01-31</time>)</li>
+          <li><time datetime="2013-12-28T22:14:00+09:00">2013-12-28</time>: charatbeatHDX v1.01</li>
+          <li><time datetime="2013-10-06T16:58:00+09:00">2013-10-06</time>:
+            <code>itemprop="dateP<em>a</em>blished"</code></li>
+          <li><time datetime="2013-09-29T10:41:00+09:00">2013-09-29</time>: CSS bugfix</li>
+          <li><time datetime="2013-09-28T18:38:00+09:00">2013-09-28</time>: responsivize</li>
+          <li><time datetime="2013-09-22T08:29:00+09:00">2013-09-22</time>: postscript to the
+              “Comment” columns</li>
+          <li><time itemprop="datePublished" datetime="2013-09-18T06:21:00+09:00">2013-09-18</time>: first publication</li>
+        </ul></dd>
+      <dt>Targeted applications:</dt>
+      <dd><ul>
+          <li><a accesskey="1" href="https://web.archive.org/web/*/http://asdf.bms.ms/soft/nanasi/*">nanasigroove ver.1.260</a> (old option-ID)</li>
+          <li><a accesskey="2" href="http://d11x.sakura.ne.jp/asdf/?p=13">nanasigroove ver.1.552</a></li>
+          <li><a accesskey="3" href="http://www.charatsoft.com/software/charatbeatHDX/index.html">charatbeatHDX VIOLET (v1.10)</a> (limited)</li>
+          <!-- li)(a accesskey="4"
+href="https://dl.dropboxusercontent.com/u/19134729/otogeokiba.html"
+            )TechnicalGroove(/a) (scheduled)(/li -->
+          <li><a accesskey="4" href="https://cosmic.mearie.org/f/sonorous/">Sonorous 0.1.0-pre (<time datetime="2014-07-08">2014-07-08</time>)</a> (for now, parsing-only)</li>
+        </ul></dd>
+      <dt>CAUTION:</dt>
+      <dd><ul>
+          <li>My investigation is imperfect.</li>
+          <li>I am not investigating nanasigroove <em>2.x</em>.</li>
+          <li><em><code>#CHANGEOPTION</code> (<code>#xxxA6</code>)
+            disregards old ID (1.2x).</em></li>
+        </ul></dd>
+      <dt>Example A:
+        <a accesskey="6" href="http://tm2.toymusical.net/">Toy Musical 2</a>
+        -&gt; Pure TM2 course
+        (video: <a accesskey="7" href="https://www.nicovideo.jp/watch/sm20549546">sm20549546</a>)</dt>
+      <dd><ol>
+          <li><code><span class="lang-ja">スピリット</span>\p1.ogg</code></li>
+          <li><code><span class="lang-ja">カービィポップ</span>\p2.ogg</code></li>
+          <li><code><span class="lang-ja">フライトポップ</span>\p3.ogg</code></li>
+          <li><code><span class="lang-ja">リッジ<!--
+            -->レーシング</span>\p4.ogg</code></li>
+        </ol></dd>
+      <dt>Example B:
+        charatbeatHDX -&gt; BMS -&gt; SAMPLE</dt>
+      <dd><code><span class="lang-ja">初音ミクの<!--
+        -->非日常(？)</span>\miku_<var>xxx</var>.bms</code></dd>
+    </dl>
+
+
+    <h2>nanasigroove 1.552: <code>#OPTION</code> values</h2>
+
+    <div class="t1">
+      <dl>
+        <dt>ID</dt>
+        <dd>If any, option-ID in nanasigroove ver.1.552</dd>
+        <dt>(old ID)</dt>
+        <dd>If any, option-ID in nanasigroove ver.1.260 (or earlier)</dd>
+        <dt><code>#xxxA6</code></dt>
+        <dd>If any, <code>#CHANGEOPTION</code> is effective</dd>
+        <dt>Comment</dt>
+        <dd>If any, the feature which should be mentioned especially</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>HI-SPEED</h3>
+      <dl>
+        <dt><code>774:HI-SPEED_x<var>Y</var>.<var>ZZ</var></code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>x0.25</code> to <code>x100.00</code>
+          (step: <code>0.01</code>)</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-0.2</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.5x] fixed to minimum value <code>0.25</code></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-0.4</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-0.6</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-0.8</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-1.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-1.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-2.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-2.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-3.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-3.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-4.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-4.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-5.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-5.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-6.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-6.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-7.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-7.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-8.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-8.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-9.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-9.5</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-10.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-12.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-15.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-20.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-100.0</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-MANUAL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Whatever the value of “MANUAL”
+          in “PLAY OPTIONS”,
+          <code>HI-SPEED</code> can be changed
+          (by <kbd>F1</kbd> | <kbd>F2</kbd>) during BMS playing</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>BASE-SPEED (REAL-HI-SPEED)</h3>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:CRA-RHS1</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>corresponds to <code>BASE-SPEED_x1.20</code>
+          / The playback-rate of BMS is changed</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:CRA-RHS2</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>corresponds to <code>BASE-SPEED_x1.50</code>
+          / Run “nanasi.exe”
+          - Select “OPTIONS”
+          - Select “PLAY OPTIONS”</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:CRA-RHS3</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>corresponds to <code>BASE-SPEED_x2.00</code></dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>CHANGE-HS</h3>
+      <dl>
+        <dt><code>774:CHANGE-HS_OFF</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>The effect of the option
+              of <code>CHANGE-HS</code> series is canceled</li>
+            <li><code>#(CHANGE)OPTION</code>
+              overcomes the provisional user-option</li>
+            <li>Therefore, <code>CHANGE-HS_OFF</code> can forbid users
+              from using <code>CHANGE-HS</code> series</li>
+            <li>The effect of old ID, such as <code>CRA-ACCEL</code>
+              and <code>HSP-LINENAZO</code>, is also canceled</li>
+            <li><code>HSP-MANUAL</code> specified by the <code>#OPTION</code>
+              command <em>cannot be canceled</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_ACCEL</code></dt>
+        <dt>(<code>774:CRA-ACCEL</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] Notes accelerate gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_BRAKE</code></dt>
+        <dt>(<code>774:CRA-BRAKE</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] Notes slow down gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_LINE</code></dt>
+        <dt>(<code>774:HSP-LINE</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><p>[1.2x] Different <code>HI-SPEED</code> is applied
+            at random to each line</p>
+          <p>[1.5x] <em><code>HI-SPEED_x1.75</code> is applied (bug ?)</em></p></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_NAZO</code></dt>
+        <dt>(<code>774:HSP-NAZO</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>HI-SPEED</code> changes continuously
+          (note-chart expands and contracts gradually)</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_NAZO2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Acceleration and a slowdown are repeated with bigger amplitude
+          than <code>CHANGE-HS_NAZO</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_RANDOM</code></dt>
+        <dt>(<code>774:HSP-RANDOM</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Different <code>HI-SPEED</code> is applied
+          at random to each note</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_COMBO-UP</code></dt>
+        <dt>(<code>774:HSP-COMBO</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>While COMBO does not break,
+          <code>HI-SPEED</code> continues going up gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_COMBO-DN</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>While COMBO does not break,
+          <code>HI-SPEED</code> continues going down gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_COMBO-RD</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>While COMBO does not break, the fluctuation range of
+          <code>CHANGE-HS_RANDOM</code> continues becoming large</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_LINENAZO</code></dt>
+        <dt>(<code>774:HSP-LINENAZO</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Different <code>CHANGE-HS_NAZO</code> is applied
+          at random to each line</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_WARP</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Note-chart leaps</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_S-WARP</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>CHANGE-HS_LINE</code>
+          + <code>CHANGE-HS_WARP</code> ?</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_LINE2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>CHANGE-HS_LINE</code>
+          + each <code>HI-SPEED</code> changes at random</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_LINEACCEL</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>CHANGE-HS_LINE2</code>
+          + <code>CHANGE-HS_ACCEL</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_CHAOS</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><code>CHANGE-HS_LINE2</code>
+          + <code>CHANGE-HS_NAZO</code>
+          + <code>CHANGE-HS_RANDOM</code> ?</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CHANGE-HS_RANDOM2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Different <code>HI-SPEED</code> is applied at random to each note,
+          and each accelerates at random or slows down at random</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-CHANGE</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><p>[1.2x] Different <code>HI-SPEED</code> is applied
+            at random to each <code>#xxx</code></p>
+          <p>[1.5x] <em>Not effective</em></p></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:HSP-NAZOLINE</code>)</dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><em>[typo]</em> from “L”
+          (video: <a accesskey="8" href="https://www.nicovideo.jp/watch/sm5406031">sm5406031</a>)</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>HIDDEN</h3>
+      <dl>
+        <dt><code>774:HIDDEN_OFF</code></dt>
+        <dt>(<code>774:HID-NORMAL</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>The effect of the option of <code>HIDDEN</code> series
+              is canceled (also possible to forbid
+              that <code>HIDDEN</code> series is used)</li>
+            <li>[1.5x] <code>HIDDEN_OFF</code> can cancel
+              <code>HIDDEN_M-SUDDEN</code></li>
+            <li>[1.5x] <code>HIDDEN_OFF</code> <em>cannot cancel</em>
+              <code>HID-HIDJUDGE</code></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HIDDEN</code></dt>
+        <dt>(<code>774:HID-HIDDEN1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note will be hidden if the timing
+          by which a note should be performed approaches</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HIDDEN2</code></dt>
+        <dt>(<code>774:HID-HIDDEN2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note is hidden earlier than <code>HIDDEN_HIDDEN</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HIDDEN3</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note is hidden earlier than <code>HIDDEN_HIDDEN2</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_SUDDEN</code></dt>
+        <dt>(<code>774:HID-SUDDEN1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note will appear if the timing
+          by which a note should be performed approaches</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_SUDDEN2</code></dt>
+        <dt>(<code>774:HID-SUDDEN2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note appears later than <code>HIDDEN_SUDDEN</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_SUDDEN3</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note appears later than <code>HIDDEN_SUDDEN2</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_M-SUDDEN</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[MANUAL-SUDDEN a.k.a. LANE-COVER (<cite>LR2</cite>)]
+          <kbd>F3</kbd>: DOWN,
+          <kbd>F4</kbd>: UP,
+          <kbd>F5</kbd>: RESET</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HID-SUD</code></dt>
+        <dt>(<code>774:HID-HIDSUD1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note appears on the way, and is hidden immediately</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HID-SUD2</code></dt>
+        <dt>(<code>774:HID-HIDSUD2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>The section where a note appears is shorter
+          than <code>HIDDEN_HID-SUD</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_HID-SUD3</code></dt>
+        <dt>(<code>774:HID-HIDSUD3</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] The section where a note appears is shorter
+          than <code>HIDDEN_HID-SUD2</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_MIST</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes translucent</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_DEEPMIST</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes almost transparent</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_BLINK</code></dt>
+        <dt>(<code>774:HID-BLINK1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] A note becomes transparent gradually
+          and it returns gradually after that</dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_BLINK2</code></dt>
+        <dt>(<code>774:HID-BLINK2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] A note blinks slowly
+          than <code>HIDDEN_BLINK</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:HIDDEN_STEALTH</code></dt>
+        <dt>(<code>774:HID-STEALTH</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note is not displayed</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>RANDOM</h3>
+      <dl>
+        <dt><code>774:RANDOM_OFF</code></dt>
+        <dt>(<code>774:RND-NORMAL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Useful at “BMS which forbids
+          <code>RANDOM</code> option”, etc.</dd>
+      </dl>
+      <dl>
+        <dt><code>774:RANDOM_MIRROR</code></dt>
+        <dt>(<code>774:RND-MIRROR</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>The right and left of note-chart are reversed</li>
+            <li>Special lines (turn-table, foot-pedal, etc.)
+              are not rearranged</li>
+            <li>In the mode (e.g. 10KEYS, 14KEYS, 18KEYS)
+              in which the playing side is designed clearly
+              (Neither 9KEYS nor OCT/FP corresponds to this),
+              rearrangement is separately applied to each side</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:RANDOM_RANDOM</code></dt>
+        <dt>(<code>774:RND-RANDOM</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>The position of the line of note-chart
+              is replaced at random</li>
+            <li>Special lines (turn-table, foot-pedal, etc.)
+              are not rearranged</li>
+            <li>In the mode in which the playing side is designed clearly,
+              rearrangement is separately applied to each side</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:RANDOM_RANDOM+</code></dt>
+        <dt>(<code>774:RND-RANDOMPLUS</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>The position of the line of note-chart
+              is replaced at random</li>
+            <li>Special lines (turn-table, foot-pedal, etc.)
+              are <strong>also rearranged</strong></li>
+            <li>In the mode in which the playing side is designed clearly,
+              rearrangement is separately applied to each side</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:RANDOM_ALL</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>The position of the line of note-chart
+              is replaced at random</li>
+            <li>Special lines (turn-table, foot-pedal, etc.)
+              are not rearranged</li>
+            <li>Rearrangement is applied
+              <strong>ranging over both sides</strong>
+              (e.g. 1P-side notes can move to 2P-side)</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:RANDOM_ALL+</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>The position of the line of note-chart
+              is replaced at random</li>
+            <li>Special lines (turn-table, foot-pedal, etc.)
+              are <strong>also rearranged</strong></li>
+            <li>Rearrangement is applied
+              <strong>ranging over both sides</strong>
+              (e.g. 1P-side notes can move to 2P-side)</li>
+          </ul></dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>NOTES</h3>
+      <dl>
+        <dt><code>774:NOTES_OFF</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>Useful at “BMS which forbids NOTES option”,
+              etc.</li>
+            <li><code>NOTES_OFF</code> can also cancel
+              <code>CRA-HYPER</code> and <code>CRA-CPDOUBLE</code></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:NOTES_DOUBLE</code></dt>
+        <dt>(<code>774:CRA-HYPER</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><p>The notes on the line which is not special
+            (non-turn-table, non-foot-pedal) are doubled</p>
+          <p>(The notes which should be pushed simultaneously increase)</p></dd>
+      </dl>
+      <dl>
+        <dt><code>774:NOTES_COPY</code></dt>
+        <dt>(<code>774:CRA-CPDOUBLE</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><ul>
+            <li>Note-chart for Single-Play is reversed
+              (special lines are excluded) and copied to 2P-side</li>
+            <li>This is the mode known as the popular name
+              <strong>DBM</strong> <span>(DOUBLE BATTLE MIRROR)</span>
+              in <cite>beatmaniaIIDX</cite></li>
+            <li>E.g. 5KEYS <span>[11, 12, 13, 14, 15, 16]</span> -&gt;
+              10KEYS DBM <span>[11, 12, 13, 14, 15, 16]
+              [15, 14, 13, 12, 11, 16]</span></li>
+            <li>E.g. 9KEYS -&gt; 18KEYS DBM
+              <span>[11, 12, 13, 14, 15, 22, 23, 24, 25]
+              [25, 24, 23, 22, 15, 14, 13, 12, 11]</span></li>
+            <li>Even if it applies this to
+              OCT/FP, 10KEYS, 14KEYS, or 18KEYS, nothing happens</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:NOTES_DBLCOPY</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><code>NOTES_DOUBLE</code> + <code>NOTES_COPY</code></dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>CRAZY</h3>
+      <dl>
+        <dt><code>774:CRAZY_OFF</code></dt>
+        <dt>(<code>774:CRA-NORMAL</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>[1.5x] Useful at “BMS which forbids
+              <code>CRAZY</code> series”, etc.</li>
+            <li>[1.2x] <code>CRAZY</code> series <em>cannot be canceled</em>
+              by <code>CRA-NORMAL</code></li>
+            <li>Supposing two or more <code>CRAZY</code> series options
+              are applied, <code>CRAZY_OFF</code> will
+              <strong>cancel all of those effects</strong></li>
+            <li><code>CRAZY_OFF</code> can cancel
+              <code>HID-HIDJUDGE</code></li>
+            <li><span><code>CRAZY_GOOD2BAD</code>,
+              <code>CRAZY_GREAT2BAD</code>,
+              <code>CRAZY_HELLJUDGE</code>,
+              <code>CRAZY_ADDMINE</code>,</span>
+              these cannot be canceled by <code>#CHANGEOPTION</code></li>
+            <li><span><code>CRA-HARD1</code>,
+              <code>CRA-HARD2</code>,
+              <code>CRA-ULTHARD</code>,
+              <code>CRA-2JUDGE</code>,</span>
+              these cannot be canceled by <code>#CHANGEOPTION</code></li>
+            <li><span><code>CRA-RHS[1-3]</code>,
+              <code>CRA-ACCEL</code>,
+              <code>CRA-BRAKE</code>,
+              <code>CRA-HYPER</code>,
+              <code>CRA-CPDOUBLE</code>,</span>
+              these cannot be canceled by <code>CRAZY_OFF</code></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_STAR</code></dt>
+        <dt>(<code>774:CRA-STAR</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>A note glitters like a rainbow
+              (Distinction by colors becomes difficult)</li>
+            <li>If this effect of <code>CRAZY_STAR</code>
+              is interrupted by <code>CRAZY_OFF</code>,
+              <em>the colors of notes will not return</em></li>
+            <li>However, the colors of notes will be initialized
+              if we use <code>CRAZY_LINEMOVE</code>
+              or <code>HIDDEN</code> series</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_SPIN</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note rotates</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_CLONE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A translucent afterimage appears behind a note</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_CLONE2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A translucent afterimage appears
+          also in the right and left of a note</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_S-CLONE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Note-chart is filled with afterimages
+          (afterimages which go from bottom to top,
+          and afterimages which cross a note-chart aslant also appear)</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_LINEMOVE</code></dt>
+        <dt>(<code>774:CRA-LINEMOVE</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>A judgment line continues moving up and down</li>
+            <li>If <code>LINEMOVE</code> is interrupted
+              by <code>CRAZY_OFF</code>,
+              <em>the position of moved line will not return</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_LINEMOVE2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd><ul>
+            <li>Enhanced <code>LINEMOVE</code>
+              (a judgment line moves until just before the position
+              where a note starts an appearance)</li>
+            <li>If <code>LINEMOVE2</code> is interrupted
+              by <code>CRAZY_OFF</code>,
+              <em>the position of moved line will not return</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_GOOD2BAD</code></dt>
+        <dt>(<code>774:CRA-HARD1</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>When a judgment is GOOD or BAD or POOR,
+          a groove-gauge decreases</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_GREAT2BAD</code></dt>
+        <dt>(<code>774:CRA-HARD2</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>When a judgment is GREAT or GOOD or BAD or POOR,
+          a groove-gauge decreases</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_HELLJUDGE</code></dt>
+        <dt>(<code>774:CRA-ULTHARD</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><p>Diminish the original judgment width by half (probably)</p>
+          <p>(The <code>HELLJUDGE</code> to <code>#RANK&nbsp;0</code>
+            is more difficult than <code>HELLJUDGE</code>
+            to <code>#RANK&nbsp;3</code>)</p></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_HELLJUDGE</code></dt>
+        <dt>(<code>774:CRA-2JUDGE</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><p>[1.5x] Diminish the original judgment width by half
+            (probably)</p>
+          <p>[1.2x] Judgments will appear only COOL or MISS
+            (BAD or POOR or air-shot POOR)</p></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_XWAVE</code></dt>
+        <dt>(<code>774:CRA-XWAVE1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note moves in a zigzag direction right and left</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_XWAVE2</code></dt>
+        <dt>(<code>774:CRA-XWAVE2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Enhanced <code>CRAZY_XWAVE</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_YWAVE</code></dt>
+        <dt>(<code>774:CRA-YWAVE1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note repeats stop-and-go</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_YWAVE2</code></dt>
+        <dt>(<code>774:CRA-YWAVE2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Enhanced <code>CRAZY_YWAVE</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_XYWAVE</code></dt>
+        <dt>(<code>774:CRA-XYWAVE1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] <code>CRAZY_XWAVE</code>
+          + <code>CRAZY_YWAVE</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_XYWAVE2</code></dt>
+        <dt>(<code>774:CRA-XYWAVE2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] Enhanced <code>CRAZY_XYWAVE</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_3DWAVE</code></dt>
+        <dt>(<code>774:CRA-3DWAVE1</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] A note becomes large gradually and
+          becomes small gradually (+ slight <code>XYWAVE</code> ?)</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_3DWAVE2</code></dt>
+        <dt>(<code>774:CRA-3DWAVE2</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] Enhanced <code>CRAZY_3DWAVE</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_HIDJUDGE</code></dt>
+        <dt>(<code>774:HID-HIDJUDGE</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] The results of a judgment of each note
+          <span>(COOL, GREAT, GOOD, BAD, POOR, air-shot POOR)</span>
+          are hidden</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_DARK</code></dt>
+        <dt>(<code>774:CRA-DARK</code>)</dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>[1.2x SECRET] Some elements of a screen are not displayed</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_DARK2</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Enhanced <code>CRAZY_DARK</code></dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_REVERSE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Note-chart is displayed on a top-and-bottom contrary
+          (like <cite>GuitarFreaks</cite>)</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_SMALL</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes small</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_BIG</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes big</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_FADEIN</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes large gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_FADEOUT</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>A note becomes small gradually</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_RD-SIZE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#xxxA6</code> able</dd>
+        <dd>Note-chart is displayed in the random size
+          from which each note differs</dd>
+      </dl>
+      <dl>
+        <dt><code>774:CRAZY_ADDMINE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Landmines are automatically installed in the random position
+          in a note-chart</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>AUTOPLAY (<em>cannot specify to <code>#OPTION</code></em>)</h3>
+      <dl>
+        <dt><code>AUTOPLAY_OFF</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><i>No comment</i></dd>
+      </dl>
+      <dl>
+        <dt><code>AUTOPLAY_AUTO</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>All the lines are performed automatically</li>
+            <li>The images of channel <code>#xxx06</code> are displayed
+              during <kbd>ENTER</kbd>-key depression</li>
+            <li><em>A score is not recorded</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>AUTOPLAY_AUTO-SC</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>Special lines, such as SCRATCHes (turntables) and FOOT-PEDAL,
+              are performed automatically</li>
+            <li>The note-chart assisted by this option is recorded
+              as “EASY CLEAR”</li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>AUTOPLAY_LINE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>The note-chart assisted by this option is recorded
+              as “EASY CLEAR”</li>
+            <li>5KEYS:
+              <span>[11, <s>12</s>, 13, <s>14</s>, 15, 16]</span></li>
+            <li>7KEYS:
+              <span>[16, 11, 12, 13, 14, 15, <s>18, 19</s>]</span></li>
+            <li>9KEYS:
+              <span>[<s>11, 12</s>, 13, 14, 15,
+                22, 23, <s>24, 25</s>]</span></li>
+            <li>10KEYS:
+              <span>[11, <s>12</s>, 13, <s>14</s>, 15, 16]</span>
+              <span>[21, <s>22</s>, 23, <s>24</s>, 25, 26]</span></li>
+            <li>OCT/FP:
+              <span>[21, 16, 11, <s>12</s>, 13, <s>14</s>, 15, <s>18</s>, 19,
+                <s>22</s>, 23, <s>24</s>, 25, <s>28</s>, 29, 26]</span></li>
+            <li>14KEYS:
+              <span>[16, 11, 12, 13, 14, 15, <s>18, 19</s>]
+                [<s>21, 22</s>, 23, 24, 25, 28, 29, 26]</span></li>
+            <li>18KEYS:
+              <span>[<s>11, 12, 13, 14</s>, 15, 18, 19, 16, 17]
+                [21, 22, 23, 24, 25, <s>28, 29, 26, 27</s>]</span></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>AUTOPLAY_VISUAL</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>UI, such as a note-chart and panels, are not displayed
+              (it is fit for appreciating BGA etc.)</li>
+            <li>The images of channel <code>#xxx06</code> are displayed
+              during <kbd>ENTER</kbd>-key depression</li>
+            <li><em>A score is not recorded</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><code>AUTOPLAY_ASC+LINE</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><code>AUTOPLAY_AUTO-SC</code>
+          + <code>AUTOPLAY_LINE</code> [EASY CLEAR]</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>AUTOPLAY_5LINE</code>)</dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>This is almost the same as <code>AUTOPLAY_LINE</code></li>
+            <li>5KEYS:
+              <span>[11, 12, 13, 14, 15, 16]</span></li>
+            <li>10KEYS:
+              <span>[11, 12, 13, 14, 15, 16]
+                [<s>21, 22</s>, 23, 24, 25, 26]</span></li>
+            <li>OCT/FP:
+              <span>[21, 16, <s>11, 12</s>, 13, 14, 15, 18, 19,
+                22, 23, 24, 25, <s>28, 29</s>, 26]</span></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>AUTOPLAY_1P</code>)</dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>Autoplayed: 5KEYS, 7KEYS, 9KEYS, 10KEYS-leftside,
+              OCT/FP, 14KEYS-leftside, 18KEYS-leftside</li>
+            <li><em>A score is not recorded</em></li>
+          </ul></dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>AUTOPLAY_2P</code>)</dt>
+        <dd><em>cannot specify</em></dd>
+        <dd><ul>
+            <li>Autoplayed:
+              10KEYS-rightside, 14KEYS-rightside, 18KEYS-rightside</li>
+            <li><em>A score is not recorded</em></li>
+          </ul></dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>GAMELEVEL (GAUGE-TYPE) -
+        <span>The achievement conditions of a game, etc.
+          are mainly controlled</span></h3>
+      <dl>
+        <dt><code>774:GAMELEVEL_BEGINNER</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>For beginners</dd>
+      </dl>
+      <dl>
+        <dt><code>774:GAMELEVEL_NORMAL</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Default</dd>
+      </dl>
+      <dl>
+        <dt><code>774:GAMELEVEL_HYPER</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>GROOVE-GAUGE 0% : STAGE FAILED</dd>
+      </dl>
+      <dl>
+        <dt><code>774:GAMELEVEL_DANGER</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>5 MISS : STAGE FAILED</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-EASY</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 60%+: STAGE CLEAR</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-NORMAL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 80%+: STAGE CLEAR</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-FULL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 100%: STAGE CLEAR</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-EXTRA</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 0%: STAGE FAILED</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-COOL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 0%: STAGE FAILED
+          (gauge increases only by “COOL”)</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GTP-10MISS</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] 10 MISS: STAGE FAILED
+          (When there are few notes, a game is over by 1 MISS)</dd>
+      </dl>
+    </div>
+
+    <div class="t1">
+      <h3>EXTRA (GAUGE-LEVEL) -
+        <span>The amount of increase and decrease of a groove-gauge
+          is mainly controlled</span></h3>
+      <dl>
+        <dt><code>774:EXTRA_OFF</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Popular name: “NORMAL gauge”</dd>
+      </dl>
+      <dl>
+        <dt><code>774:EXTRA_EASY</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>A gauge increases easily and it becomes difficult to decrease</dd>
+      </dl>
+      <dl>
+        <dt><code>774:EXTRA_HARD</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>A gauge is hard to increase and it becomes easy to decrease</dd>
+      </dl>
+      <dl>
+        <dt><code>774:EXTRA_VERYHARD</code></dt>
+        <dt><i>(No alias)</i></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>A gauge is very hard to increase
+          and it becomes very easy to decrease</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-VERYEASY</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] A gauge increases quite easily,
+          and it becomes difficult to decrease [EASY clear]</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-EASY</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] A gauge increases easily just for a moment
+          [EASY clear]</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-NORMAL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] Popular name: “NORMAL gauge”</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-HARD</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] A gauge decreases easily</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-VERYHARD</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] A gauge becomes quite difficult to increase,
+          and it becomes easy to decrease</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-TOTAL100</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] <code>#TOTAL&nbsp;100</code> is compulsorily applied</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-ABYSS</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] A gauge will become <em>empty</em>
+          if a mistake is made</dd>
+      </dl>
+      <dl>
+        <dt><i>No ID</i></dt>
+        <dt>(<code>774:GLV-HELL</code>)</dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>[1.2x] When a mistake is made, STAGE is FAILED compulsorily</dd>
+      </dl>
+    </div>
+
+
+
+    <div class="appendix">
+
+      <h3 class="o">Memo <span>(in nanasigroove ver.1.552,
+        TOTAL NOTES 400, <code>#TOTAL 400</code>)</span></h3>
+
+      <div class="t2">
+        <dl>
+          <dt>ID</dt>
+          <dd><code>GAMELEVEL</code> (<code>GTP</code>),
+            or <code>EXTRA</code> (<code>GLV</code>)</dd>
+          <dt>INIT</dt>
+          <dd>[<code><var>n</var>%~</code>]
+            The initial value of a groove-gauge</dd>
+          <dt>CLEAR</dt>
+          <dd>[<code><var>n</var>%+</code>]
+            The value of the groove-gauge which a player must attain</dd>
+          <dt>FAILED</dt>
+          <dd>[<code>0%</code> | <code><var>n</var>MISS</code>]
+            The conditions for which a play is interrupted compulsorily</dd>
+          <dt>COOL</dt>
+          <dt>GREAT</dt>
+          <dt>GOOD</dt>
+          <dt>BAD</dt>
+          <dt>POOR</dt>
+          <dd>[<code>±<var>n</var>%</code>]
+            The rate of change of a groove-gauge in each judgment</dd>
+        </dl>
+      </div>
+
+      <h4><code>EXTRA</code> series</h4>
+      <div id="EXTRA-OFF" class="t2">
+        <h5><code>EXTRA_OFF</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.20%</dd>
+          <dd>+1.20%</dd>
+          <dd>+0.60%</dd>
+          <dd>-2.40%</dd>
+          <dd>-4.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-3.00%</dd>
+          <dd>-5.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-3.00%</dd>
+          <dd>-5.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>50%~</dd>
+          <dd>90%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.90%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-4.50%</dd>
+          <dd>-7.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>5MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-20.00%</dd>
+          <dd>-20.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+
+      <div class="t2">
+        <h5><code>EXTRA_EASY</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.10%</dd>
+          <dd>+0.54%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.10%</dd>
+          <dd>+0.54%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>50%~</dd>
+          <dd>90%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.90%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-4.50%</dd>
+          <dd>-7.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>50%~</dd>
+          <dd>90%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.90%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-4.50%</dd>
+          <dd>-7.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>5MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-20.00%</dd>
+          <dd>-20.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>5MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-20.00%</dd>
+          <dd>-20.00%</dd>
+        </dl>
+      </div>
+
+      <div class="t2">
+        <h5><code>EXTRA_HARD</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>80%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.90%</dd>
+          <dd>+0.80%</dd>
+          <dd>+0.25%</dd>
+          <dd>-3.31%</dd>
+          <dd>-5.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>80%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.90%</dd>
+          <dd>+0.80%</dd>
+          <dd>+0.25%</dd>
+          <dd>-3.31%</dd>
+          <dd>-5.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+
+      <div class="t2">
+        <h5><code>EXTRA_VERYHARD</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-2.86%</dd>
+          <dd>-4.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-2.86%</dd>
+          <dd>-4.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>60%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.79%</dd>
+          <dd>+0.79%</dd>
+          <dd>+0.20%</dd>
+          <dd>-3.60%</dd>
+          <dd>-6.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>60%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.79%</dd>
+          <dd>+0.79%</dd>
+          <dd>+0.20%</dd>
+          <dd>-3.60%</dd>
+          <dd>-6.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>40%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-15.00%</dd>
+          <dd>-25.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>40%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-15.00%</dd>
+          <dd>-25.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-0.02%</dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-0.02%</dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+      <p>Note: “<code>-0.02%</code>”
+        (<code>GAMELEVEL_DANGER</code> and <code>GTP-10MISS</code>) is
+        “<code>-0.01% ~ -0.02%</code>” correctly</p>
+
+      <h4><code>GLV</code> after <code>GTP</code></h4>
+      <div class="t2">
+        <h5><code>GTP</code> &gt;<code>GLV</code>:</h5>
+        <dl>
+          <dt><code>GLV-VERYEASY</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-EASY</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.10%</dd>
+          <dd>+0.54%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-3.00%</dd>
+          <dd>-5.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-HARD</code></dt>
+          <dd>80%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.90%</dd>
+          <dd>+0.80%</dd>
+          <dd>+0.25%</dd>
+          <dd>-3.31%</dd>
+          <dd>-5.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-VERYHARD</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-TOTAL100</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-ABYSS</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GLV-HELL</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+
+      <h4><code>GLV</code> before <code>GTP</code></h4>
+
+      <div class="t2">
+        <h5><code>GLV-VERYEASY</code>,
+          <code>EASY</code> &gt;<code>GTP</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.10%</dd>
+          <dd>+0.54%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-3.00%</dd>
+          <dd>-5.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>50%~</dd>
+          <dd>90%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.90%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-4.50%</dd>
+          <dd>-7.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>5MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-20.00%</dd>
+          <dd>-20.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+
+      <div class="t2">
+        <h5><code>GLV-NORMAL</code> &gt;<code>GTP</code>:</h5>
+        <p>Same as <code><a accesskey="9" href="#EXTRA-OFF">EXTRA_OFF</a></code></p>
+      </div>
+
+      <div class="t2">
+        <h5><code>GLV-HARD</code>,
+          <code>VERYHARD</code>,
+          <code>TOTAL100</code>,
+          <code>ABYSS</code>,
+          <code>HELL</code> &gt;<code>GTP</code>:</h5>
+        <dl>
+          <dt><code>GTP-EASY</code></dt>
+          <dd>30%~</dd>
+          <dd>70%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.50%</dd>
+          <dd>+1.50%</dd>
+          <dd>+0.75%</dd>
+          <dd>-2.25%</dd>
+          <dd>-3.75%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_BEGINNER</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.10%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-2.71%</dd>
+          <dd>-4.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_NORMAL</code></dt>
+          <dd>80%~</dd>
+          <dd>0%+</dd>
+          <dd>0%</dd>
+          <dd>+0.90%</dd>
+          <dd>+0.80%</dd>
+          <dd>+0.25%</dd>
+          <dd>-3.31%</dd>
+          <dd>-5.50%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-NORMAL</code></dt>
+          <dd>25%~</dd>
+          <dd>80%+</dd>
+          <dd><i>NONE</i></dd>
+          <dd>+1.00%</dd>
+          <dd>+1.00%</dd>
+          <dd>+0.50%</dd>
+          <dd>-3.00%</dd>
+          <dd>-5.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_HYPER</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-FULL</code>,<code>EXTRA</code>,<code>COOL</code></dt>
+          <dd>50%~</dd>
+          <dd>100%+</dd>
+          <dd>0%</dd>
+          <dd>+1.00%</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-9.00%</dd>
+          <dd>-15.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GAMELEVEL_DANGER</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+        <dl>
+          <dt><code>GTP-10MISS</code></dt>
+          <dd>100%~</dd>
+          <dd>0%+</dd>
+          <dd>1MISS</dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd><i>0.00%</i></dd>
+          <dd>-100.00%</dd>
+          <dd>-100.00%</dd>
+        </dl>
+      </div>
+
+    </div>
+
+
+
+    <h2>charatbeatHDX <code>#OPTION</code> values:</h2>
+
+    <div class="t3">
+      <dl>
+        <dt>ID</dt>
+        <dd>option-ID in charatbeatHDX</dd>
+        <dt><code>#xxxA6</code></dt>
+        <dd>If it is “able”,
+          <code>#CHANGEOPTION</code> is effective</dd>
+        <dt>Comment</dt>
+        <dd>If any, the feature which should be mentioned especially</dd>
+      </dl>
+    </div>
+
+    <div class="t3">
+      <h3>BGAMODE</h3>
+      <dl>
+        <dt><code>charatbeatHDX:BGAMODE&nbsp;0</code></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><!--
+          BGAが256x256では無い場合、BGA領域に合わせるようにスケーリングされる
+          -->When the size of BGA is not 256x256,
+          BGA is automatically scaled and fit to BGA-canvas</dd>
+      </dl>
+      <dl>
+        <dt><code>charatbeatHDX:BGAMODE&nbsp;1</code></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><!-- BGA領域の上中心を原点として、100％の大きさで表示される
+          -->BGA is displayed as the full-scale image/video
+          (on the top/center of BGA-canvas)</dd>
+      </dl>
+      <dl>
+        <dt><code>charatbeatHDX:BGAMODE&nbsp;2</code></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd><!-- BGA領域の上中心を原点として、80％の大きさで表示される
+          ※BGAがゲームのフレームに隠れないようにしたい場合に使用
+          -->BGA is displayed as the 80%-scale image/video
+          (on the top/center of BGA-canvas)
+          (In order to prevent the frame overlap BGA)</dd>
+      </dl>
+    </div>
+
+    <div class="t3">
+      <h3>LONGMODE</h3>
+      <dl>
+        <dt><code>charatbeatHDX:LONGMODE&nbsp;0</code></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Force CN (CHARGE-NOTE mode)</dd>
+      </dl>
+      <dl>
+        <dt><code>charatbeatHDX:LONGMODE&nbsp;1</code></dt>
+        <dd><code>#OPTION</code> only</dd>
+        <dd>Force HCN (HELL-CHARGE-NOTE mode)</dd>
+      </dl>
+    </div>
+
+    <p class="eod">[End Of Document]</p>
+
+
+</body></html>
